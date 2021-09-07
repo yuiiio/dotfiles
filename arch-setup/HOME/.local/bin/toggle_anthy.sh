@@ -3,5 +3,5 @@
 if pgrep wlanthy >/dev/null; then
     pkill -9 wlanthy
 else
-    ~/wlanthy/build/wlanthy
+    wlanthy
 fi
