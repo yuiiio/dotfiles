@@ -1,0 +1,43 @@
+####
+misc
+####
+
+"system-resolved"
+ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+
+
+"swaylock"
+ln -sf /usr/local/etc/pam.d/swaylock /etc/pam.d/swaylock
+
+"Cica font"
+curl -O "https://github.com/miiton/Cica/releases/download/v5.0.2/Cica_v5.0.2_with_emoji.zip"
+
+
+####
+package
+####
+
+#for makepkg
+base-devel ccache
+
+#for fonts
+noto-fonts
+
+#for user settings
+sudo vi
+
+#for wifi settings
+iwd
+
+#general
+brightnessctl
+firefox
+
+
+####
+systemd
+####
+
+#network
+systemd-networkd
+systemd-resolved
