@@ -31,6 +31,8 @@ iwd
 #general
 brightnessctl
 firefox
+wl-clipboard
+pipewire-pulse
 
 
 ####

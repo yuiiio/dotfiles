@@ -1,7 +1,11 @@
 #!/bin/sh
 
-if pgrep wlanthy >/dev/null; then
+FILE="$HOME/.config/running_wlanthy"
+
+if [ -e $FILE ]; then
     pkill -9 wlanthy
+    rm $FILE
 else
-    wlanthy
+    touch $FILE
+    ~/wlanthy/build/wlanthy
 fi
