@@ -7,5 +7,5 @@ if [ -e $FILE ]; then
     rm $FILE
 else
     touch $FILE
-    ~/wlanthy/build/wlanthy
+    wlanthy
 fi
