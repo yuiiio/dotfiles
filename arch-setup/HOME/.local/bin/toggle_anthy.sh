@@ -3,8 +3,9 @@
 FILE="$HOME/.config/running_wlanthy"
 
 if [ -e $FILE ]; then
-    pkill -9 wlanthy
-    rm $FILE
+    if $(pkill -9 wlanthy); then
+        rm $FILE;
+    fi
 else
     touch $FILE
     wlanthy

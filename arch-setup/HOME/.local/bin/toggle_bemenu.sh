@@ -3,10 +3,11 @@
 FILE="$HOME/.config/running_bemenu"
 
 if [ -e $FILE ]; then
-    pkill -9 bemenu-run
-    rm $FILE
+    if $(pkill -9 bemenu-run); then
+        rm $FILE;
+    fi
 else
     touch $FILE
-    bemenu-run --tb "#7AA2F7" --tf "#FFFFFF" --hb "#7AA2F7" --hf "#FFFFFF" --fb "#323232"  --nb "#323232"
+    bemenu-run --tb "#285577" --tf "#FFFFFF" --hb "#4C7899" --hf "#FFFFFF" --fb "#333333"  --nb "#333333"
     rm $FILE
 fi
