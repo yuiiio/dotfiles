@@ -1,3 +1,3 @@
-IGPU=`readlink -f /dev/dri/by-path/pci-0000:00:02.0-card`
+IGPU_CARD=`readlink -f /dev/dri/by-path/pci-0000:00:02.0-card`
 
-WLR_DRM_DEVICES="$IGPU" sway
+WLR_DRM_DEVICES="$IGPU_CARD" sway

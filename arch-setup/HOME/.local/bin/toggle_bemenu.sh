@@ -8,6 +8,6 @@ if [ -e $FILE ]; then
     fi
 else
     touch $FILE
-    bemenu-run --tb "#285577" --tf "#FFFFFF" --hb "#4C7899" --hf "#FFFFFF" --fb "#333333"  --nb "#333333"
+    bemenu-run --tb "#285577" --tf "#FFFFFF" --hb "#4C7899" --hf "#FFFFFF" --fb "#333333"  --nb "#333333" --fn 'monospace 14'
     rm $FILE
 fi

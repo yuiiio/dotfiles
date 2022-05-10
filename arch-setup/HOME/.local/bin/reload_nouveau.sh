@@ -1,10 +1,12 @@
  #!/usr/bin/env bash
 
+ #sudo udevadm trigger --verbose --type=devices --action=remove --subsystem-match=drm --property-match="MINOR=1"
+
  declare result
 
  _reload_nouveau() {
      sudo rmmod nouveau
-     sudo modprobe nouveau
+     sudo modprobe nouveau runpm=1 atomic=1
 }
 
 result=$(lsmod | grep nvidia)

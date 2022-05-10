@@ -1,7 +1,7 @@
 #!/bin/sh
 
-if pgrep steam >/dev/null; then
-    echo "steam running"
+if pgrep steam >/dev/null || pgrep wine >/dev/null; then
+    echo "steam or wine running"
 else
-    swaylock -f -i /usr/local/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png
+    swaylock -f
 fi
