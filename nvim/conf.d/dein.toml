@@ -19,37 +19,38 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'lifepillar/vim-solarized8'
+repo = 'arcticicestudio/nord-vim'
 hook_add = '''
     set termguicolors
-    colorscheme solarized8
+    set background=dark
+    colorscheme nord
 '''
 
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
-hook_add = '''
-    let g:airline_theme = 'solarized'
-'''
+#[[plugins]]
+#repo = 'vim-airline/vim-airline-themes'
+#hook_add = '''
+#    let g:airline_theme = 'base16_nord'
+#'''
 
-[[plugins]]
-repo = 'kat0h/vim-auto-color-switcher'
-hook_post_update =  '''
-    let g:dein#plugin.build = 'make'
-'''
-hook_add = '''
-    if system('command -v ostheme') != ''
-        " Use ostheme command to detect os appearance theme.
-        " See the following link for more details about ostheme:
-        "     https://github.com/altescy/ostheme
-        let g:auto_color_switcher#binary_path = 'ostheme --observe'
-    elseif !has('mac')
-        let g:auto_color_switcher#disable = v:true
-    endif
-    let g:auto_color_switcher#command={
-    \ 'light': 'set background=light',
-    \ 'dark': 'set background=dark'
-    \}
-'''
+#[[plugins]]
+#repo = 'kat0h/vim-auto-color-switcher'
+#hook_post_update =  '''
+#    let g:dein#plugin.build = 'make'
+#'''
+#hook_add = '''
+#    if system('command -v ostheme') != ''
+#        " Use ostheme command to detect os appearance theme.
+#        " See the following link for more details about ostheme:
+#        "     https://github.com/altescy/ostheme
+#        let g:auto_color_switcher#binary_path = 'ostheme --observe'
+#    elseif !has('mac')
+#        let g:auto_color_switcher#disable = v:true
+#    endif
+#    let g:auto_color_switcher#command={
+#    \ 'light': 'set background=light',
+#    \ 'dark': 'set background=dark'
+#    \}
+#'''
 
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
@@ -83,7 +84,7 @@ hook_add = '''
 repo = 'w0rp/ale'
 hook_add = '''
     let g:ale_sign_column_always = 1
-    let g:ale_fix_on_save = 1
+    let g:ale_fix_on_save = 0
     let g:ale_completion_enabled = 0
     let g:ale_sign_error = 'X'
     let g:ale_sign_warning = '!'

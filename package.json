@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@tailwindcss/language-server": "^0.0.7",
+    "neovim": "^4.10.1"
+  }
+}

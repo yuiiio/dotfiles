@@ -1,5 +1,6 @@
 export PATH="$HOME/.local/bin:$PATH"
 source "$HOME/.cargo/env"
+export PATH="$PATH:$HOME/go/bin"
 
 export DXVK_FILTER_DEVICE_NAME="UHD Graphics 630"
 export DXVK_HUD="devinfo,fps,frametimes,gpuload,version,api"
@@ -9,7 +10,6 @@ export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 export LD_LIBRARY_PATH="/usr/local/lib"
 
 export __EGL_VENDOR_LIBRARY_FILENAMES="/usr/share/glvnd/egl_vendor.d/50_mesa.json"
-
 
 export IGPU_RENDER=`readlink -f /dev/dri/by-path/pci-0000:00:02.0-render`
 export MOZ_WAYLAND_DRM_DEVICE="$IGPU_RENDER"
@@ -24,6 +24,6 @@ export XDG_SESSION_TYPE="wayland"
 
 #export LD_PRELOAD="libSDL2.so"
 
-#export GBM_BACKEND="nvidia-drm"
+#export GBM_BACKEND="nvidia-drm"2
 
 #export XWAYLAND_NO_GLAMOR="1"
