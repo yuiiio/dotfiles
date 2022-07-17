@@ -31,7 +31,7 @@ hook_add = '''
 #hook_add = '''
 #    let g:airline_theme = 'base16_nord'
 #'''
-
+#
 #[[plugins]]
 #repo = 'kat0h/vim-auto-color-switcher'
 #hook_post_update =  '''
@@ -163,3 +163,4 @@ repo = "airblade/vim-gitgutter"
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+

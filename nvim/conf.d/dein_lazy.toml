@@ -34,3 +34,5 @@ on_ft = ['hush']
 [[plugins]]
 repo = 'ziglang/zig.vim'
 on_ft = ['zig']
+
+
