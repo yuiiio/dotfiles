@@ -1,0 +1,51 @@
+mk_add_options AUTOCLOBBER=1
+ac_add_options --enable-application=browser
+ac_add_options --prefix=/usr
+ac_add_options --enable-release
+ac_add_options --enable-hardening
+ac_add_options --enable-optimize
+ac_add_options --enable-rust-simd
+ac_add_options --with-ccache
+ac_add_options --enable-default-toolkit=cairo-gtk3-wayland
+export CC='clang --target=x86_64-unknown-linux-gnu'
+export CXX='clang++ --target=x86_64-unknown-linux-gnu'
+export AR=llvm-ar
+export NM=llvm-nm
+export RANLIB=llvm-ranlib
+
+# Branding
+ac_add_options --with-branding=browser/branding/nightly
+# ac_add_options --with-distribution-id=org.archlinux
+ac_add_options --with-unsigned-addon-scopes=app,system
+ac_add_options --allow-addon-sideload
+export MOZ_APP_REMOTINGNAME=firefox-nightly
+export MOZ_TELEMETRY_REPORTING=1
+export MOZ_REQUIRE_SIGNING=1
+
+# Keys
+# ac_add_options --with-google-location-service-api-keyfile=${PWD@Q}/google-api-key
+# ac_add_options --with-google-safebrowsing-api-keyfile=${PWD@Q}/google-api-key
+# ac_add_options --with-mozilla-api-keyfile=${PWD@Q}/mozilla-api-key
+
+# Features
+ac_add_options --disable-warnings-as-errors
+ac_add_options --disable-crashreporter
+ac_add_options --disable-updater
+ac_add_options --disable-tests
+ac_add_options --disable-debug
+ac_add_options --disable-warnings-as-errors
+ac_add_options --disable-updater
+
+
+ac_add_options --enable-linker=lld
+ac_add_options --disable-elf-hack
+ac_add_options --disable-bootstrap
+
+ac_add_options --with-wasi-sysroot=/usr/share/wasi-sysroot
+
+# System libraries
+ac_add_options --with-system-nspr
+ac_add_options --with-system-nss
+# Features
+ac_add_options --enable-alsa
+ac_add_options --enable-jack

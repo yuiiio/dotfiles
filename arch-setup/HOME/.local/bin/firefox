@@ -1,0 +1,6 @@
+#ln -sf /usr/lib/dri/iHD_drv_video.so $HOME/intel_gl
+#ln -sf /usr/lib/dri/iris_dri.so $HOME/intel_gl
+
+LIBGL_DRIVERS_PATH=/home/haibane/intel_gl /home/haibane/gecko-dev/obj-x86_64-pc-linux-gnu/dist/bin/firefox -no-remote -profile /home/haibane/.mozilla/firefox/72ki92zy.default-nightly/
+
+
