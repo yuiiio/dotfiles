@@ -27,3 +27,7 @@ You can use this environment on Docker.
 ```bash
 make docker DOCKER_USERNAME=username DOCKER_PASSWORD=password
 ```
+
+## neovim
+#Coc
+if update config need remove $HOME/.cache/dein folder.
