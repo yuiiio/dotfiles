@@ -15,6 +15,8 @@ inoremap <silent> jj <ESC>
 inoremap <silent> kk <ESC>
 inoremap <silent> <C-j> j
 inoremap <silent> <C-k> k
+inoremap <Up> <Up>
+inoremap <Down> <Down>
 noremap <C-c><C-c> :nohlsearch<Cr><Esc>
 noremap <C-N><C-N> :set relativenumber!<CR>
 

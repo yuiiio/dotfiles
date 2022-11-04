@@ -7,6 +7,11 @@
   "zig.enabled": true,
   "zig.path": "zls",
   "languageserver": {
+    "rust": {
+      "command": "~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rust-analyzer",
+      "filetypes": ["rust"],
+      "rootPatterns": ["Cargo.toml"]
+    },
     "golang": {
       "command": "gopls",
       "rootPatterns": ["go.mod"],
