@@ -25,8 +25,8 @@ set $menu $HOME/.local/bin/toggle_bemenu.sh
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#output * bg /home/haibane/Downloads/wRZrhjk.jpeg fill
-output * bg /home/haibane/Downloads/wallpapers/backgrounds/Morskie Oko.jpg fill
+output * bg /home/haibane/Downloads/wRZrhjk.jpeg fill
+#output * bg /home/haibane/Downloads/wallpapers/backgrounds/Morskie Oko.jpg fill
 #
 # Example configuration:
 #
@@ -36,6 +36,11 @@ output * bg /home/haibane/Downloads/wallpapers/backgrounds/Morskie Oko.jpg fill
 output eDP-1 resolution 3840x2160 position 0,0
 output HDMI-A-4 resolution 1080x1920 position 480,1080 scale 2 transform 90
 
+output * scale_filter nearest
+
+#output * max_render_time 14
+# at 60hz 1000/60 = 16.666... is max max latency
+
 ### Idle configuration
 #
 # Example configuration:
@@ -43,9 +48,9 @@ output HDMI-A-4 resolution 1080x1920 position 480,1080 scale 2 transform 90
  exec swayidle -w \
           timeout 600 ~/.local/bin/sway_lock.sh \
           timeout 610 ~/.local/bin/backlight_down.sh \
-          resume 'swaymsg "output * dpms on"' \
+          resume 'swaymsg "output * power on"' \
           timeout 620 ~/.local/bin/suspend_when_ac_offline.sh \
-          before-sleep 'swaylock -f'
+          before-sleep 'IGPU_CARD=`readlink -f /dev/dri/by-path/pci-0000:00:02.0-card`\ WLR_DRM_DEVICES="$IGPU_CARD" swaylock -f'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -80,6 +85,15 @@ input "1356:2508:Wireless_Controller_Touchpad" {
     tap enabled
     natural_scroll enabled
     }
+
+# Allow switching between workspaces with left and right swipes
+ bindgesture swipe:right workspace prev
+ bindgesture swipe:left workspace next
+# Allow container movements by pinching them
+# bindgesture pinch:inward+up move up
+# bindgesture pinch:inward+down move down
+# bindgesture pinch:inward+left move left
+# bindgesture pinch:inward+right move right
 
 
 ### Key bindings
@@ -221,7 +235,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # wlanthy toggle
-# bindsym Ctrl+space exec ~/.local/bin/toggle_anthy.sh
+bindsym Ctrl+space exec ~/.local/bin/toggle_anthy.sh
 
 # brightnessctl
 bindsym F4 exec brightnessctl s 1%-
@@ -248,7 +262,7 @@ bar {
     colors {
         statusline #ffffff
         background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        inactive_workspace #323232FF #323232FF #5c5c5c
     }
 }
 

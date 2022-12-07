@@ -1,0 +1,8 @@
+<driconf>
+  <device screen="0" driver="iris">
+    <application name="Default">
+      <option name="force_glsl_extensions_warn" value="false" />
+      <option name="vk_xwayland_wait_ready" value="false" />
+    </application>
+  </device>
+</driconf>
