@@ -11,6 +11,6 @@ echo -n "1-12" > /sys/bus/usb/drivers/usb/unbind
 echo -n "1-9" > /sys/bus/usb/drivers/usb/unbind
 
 # Wireless
-echo -n "1-14" > /sys/bus/usb/drivers/usb/unbind
+#echo -n "1-14" > /sys/bus/usb/drivers/usb/unbind
 
 /usr/bin/lsusb -t

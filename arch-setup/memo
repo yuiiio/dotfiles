@@ -33,6 +33,7 @@ brightnessctl
 firefox
 wl-clipboard
 pipewire-pulse
+polkit
 
 
 ####

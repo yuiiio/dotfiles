@@ -1,0 +1,9 @@
+[Unit]
+Description=Powertop tunings
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c 'echo 0 > /sys/class/leds/asus::screenpad/brightness'
+
+[Install]
+WantedBy=multi-user.target

@@ -1,5 +1,4 @@
 export PATH="$HOME/.local/bin:$PATH"
-source "$HOME/.cargo/env"
 export PATH="$PATH:$HOME/go/bin"
 
 export DXVK_FILTER_DEVICE_NAME="UHD Graphics 630"

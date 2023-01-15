@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILE="$HOME/.config/running_fcitx5"
+FILE="/tmp/running_fcitx5"
 
 if [ -e $FILE ]; then
     #if $(pkill -9 fcitx5); then

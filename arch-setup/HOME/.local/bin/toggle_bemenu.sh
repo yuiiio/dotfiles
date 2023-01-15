@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILE="$HOME/.config/running_bemenu"
+FILE="/tmp/running_bemenu"
 
 if [ -e $FILE ]; then
     #if $(pkill -9 bemenu-run); then

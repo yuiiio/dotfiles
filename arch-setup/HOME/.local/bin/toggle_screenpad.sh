@@ -1,6 +1,6 @@
 #!/bin/sh
 
-state_file="/home/haibane/.config/screenpad_status"
+state_file="/tmp/screenpad_status"
 
 if [ -f $state_file ]; then
     echo "file found"
