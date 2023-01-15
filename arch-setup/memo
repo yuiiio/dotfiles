@@ -33,8 +33,17 @@ brightnessctl
 firefox
 wl-clipboard
 pipewire-pulse
+pipewire-alsa
+gstreamer-vaapi
+ffmpeg
+mpv
+lib32-pipewire
+lib32-pipewire-jack
+gst-plugin-pipewire
 polkit
-
+xorg-xkbcomp
+xdg-desktop-portal-wlr
+xdg-desktop-portal-gtk
 
 ####
 systemd

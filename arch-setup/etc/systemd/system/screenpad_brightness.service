@@ -1,5 +1,6 @@
 [Unit]
 Description=Powertop tunings
+After=powertop.service
 
 [Service]
 Type=oneshot

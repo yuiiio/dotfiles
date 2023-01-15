@@ -234,8 +234,8 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# wlanthy toggle
-bindsym Ctrl+space exec ~/.local/bin/toggle_anthy.sh
+# ime toggle
+bindsym Ctrl+space exec ~/.local/bin/toggle_im.sh
 
 # brightnessctl
 bindsym F4 exec brightnessctl s 1%-
@@ -275,3 +275,7 @@ input "type:keyboard" {
 default_border none
 focus_follows_mouse no
 for_window [app_id="foot"] border pixel
+
+#primary_selection disabled
+
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK

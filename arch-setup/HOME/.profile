@@ -3,7 +3,7 @@ export PATH="$PATH:$HOME/go/bin"
 
 export DXVK_FILTER_DEVICE_NAME="UHD Graphics 630"
 export DXVK_HUD="devinfo,fps,frametimes,gpuload,version,api"
-export DXVK_CONFIG_FILE="/home/haibane/.config/dxvk.conf"
+export DXVK_CONFIG_FILE="$HOME/.config/dxvk.conf"
 
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 export LD_LIBRARY_PATH="/usr/local/lib"
@@ -23,6 +23,9 @@ export XDG_SESSION_TYPE="wayland"
 
 #export LD_PRELOAD="libSDL2.so"
 
-#export GBM_BACKEND="nvidia-drm"2
+#export GBM_BACKEND="nvidia-drm"
 
-#export XWAYLAND_NO_GLAMOR="1"
+export MOZ_DRM_DEVICE="$MOZ_WAYLAND_DRM_DEVICE"
+#export XDG_CURRENT_DESKTOP="sway"
+
+export GTK_USE_PORTAL="1"
