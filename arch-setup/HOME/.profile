@@ -26,6 +26,8 @@ export XDG_SESSION_TYPE="wayland"
 #export GBM_BACKEND="nvidia-drm"
 
 export MOZ_DRM_DEVICE="$MOZ_WAYLAND_DRM_DEVICE"
-#export XDG_CURRENT_DESKTOP="sway"
 
-export GTK_USE_PORTAL="1"
+export XDG_CURRENT_DESKTOP="sway"
+export GTK_USE_PORTAL="0"
+
+export LIBVA_DRIVER_NAME="iHD"

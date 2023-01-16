@@ -182,7 +182,7 @@ input "1356:2508:Wireless_Controller_Touchpad" {
     bindsym $mod+s splitv
 
     # Switch the current container between different layout styles
-    #bindsym $mod+s layout stacking
+    #bindsym $mod+q layout stacking
     #bindsym $mod+w layout tabbed
     #bindsym $mod+e layout toggle split
 

@@ -40,10 +40,15 @@ mpv
 lib32-pipewire
 lib32-pipewire-jack
 gst-plugin-pipewire
+gst-plugins-bad
+gst-plugins-base
+gst-plugins-good
+lib32-gst-plugins-base
+lib32-gst-plugins-good
 polkit
 xorg-xkbcomp
-xdg-desktop-portal-wlr
 xdg-desktop-portal-gtk
+xdg-desktop-portal-wlr
 
 ####
 systemd
