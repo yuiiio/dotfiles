@@ -59,3 +59,4 @@ widget.dmabuf.force-enabled	true
 widget.gtk.overlay-scrollbars.enabled	false
 
 extensions.pocket.enabled false
+layers.acceleration.force-enabled	true
