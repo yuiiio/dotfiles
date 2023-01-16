@@ -54,9 +54,9 @@ signon.management.page.breach-alerts.enabled	false
 signon.rememberSignons	false
 storage.vacuum.last.index	0
 storage.vacuum.last.places.sqlite	1673799196
-widget.dmabuf-textures.enabled	true
-widget.dmabuf.force-enabled	true
 widget.gtk.overlay-scrollbars.enabled	false
 
 extensions.pocket.enabled false
-layers.acceleration.force-enabled	true
+widget.dmabuf.force-enabled true
+widget.dmabuf-textures.enabled true
+layers.acceleration.force-enabled true

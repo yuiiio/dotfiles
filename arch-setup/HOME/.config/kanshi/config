@@ -1,0 +1,7 @@
+profile {
+	output eDP-1
+}
+
+profile {
+	output eDP-1 enable scale 2
+}

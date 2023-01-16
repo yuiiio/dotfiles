@@ -52,6 +52,7 @@ xdg-desktop-portal-wlr
 
 systemctl --user enable pipewire
 systemctl --user enable pipewire-pulse
+systemctl enable --user wireplumber
 
 ####
 systemd
