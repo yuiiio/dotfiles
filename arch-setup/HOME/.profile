@@ -5,8 +5,9 @@ export DXVK_FILTER_DEVICE_NAME="UHD Graphics 630"
 export DXVK_HUD="devinfo,fps,frametimes,gpuload,version,api"
 export DXVK_CONFIG_FILE="$HOME/.config/dxvk.conf"
 
-export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
-export LD_LIBRARY_PATH="/usr/local/lib"
+#need 32bit path maybe
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
+export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 
 export __EGL_VENDOR_LIBRARY_FILENAMES="/usr/share/glvnd/egl_vendor.d/50_mesa.json"
 
