@@ -278,4 +278,6 @@ for_window [app_id="foot"] border pixel
 
 #primary_selection disabled
 
+#focus_on_window_activation focus
+
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
