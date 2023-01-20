@@ -60,3 +60,4 @@ extensions.pocket.enabled false
 widget.dmabuf.force-enabled true
 widget.dmabuf-textures.enabled true
 layers.acceleration.force-enabled true
+browser.urlbar.ctrlCanonizesURLs false
