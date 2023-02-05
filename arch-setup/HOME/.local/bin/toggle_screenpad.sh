@@ -31,6 +31,11 @@ current_state=$(cat $state_file)
 #        echo $value > $state_file;;
 #esac
 
+# screenpad brightness 0 to 255
+# intel_backlight/brightness 0 to 120000(max_brightness)
+# 120000 / 255 = 470.0xxx
+#
+
 case $current_state in
     "on" )
         echo 0 > /sys/class/leds/asus::screenpad/brightness
@@ -39,7 +44,7 @@ case $current_state in
     "off" )
         MAIN_DISPLAY_BACKLIGHT=`cat /sys/class/backlight/intel_backlight/brightness`
 
-        LEVEL=$(($MAIN_DISPLAY_BACKLIGHT / 600))
+        LEVEL=$(($MAIN_DISPLAY_BACKLIGHT / 470))
         echo $LEVEL > /sys/class/leds/asus::screenpad/brightness
         echo on > $state_file
         echo "on";;
