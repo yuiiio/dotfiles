@@ -46,3 +46,5 @@ export WLR_SCENE_DEBUG_DAMAGE="0"
 export WINE_DISABLE_FULLSCREEN_HACK="1"
 
 export WINIT_UNIX_BACKEND="wayland"
+
+export MESA_VK_WSI_PRESENT_MODE="immediate"
