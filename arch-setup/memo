@@ -62,3 +62,13 @@ systemd
 #network
 systemd-networkd
 systemd-resolved
+
+#recommend gtk theme
+https://github.com/wouterj/nord-gtk-theme.git
+
+#recommend web browser
+netsurf
+
+xdg-settings set default-web-browser netsurf.desktop
+xdg-settings set default-url-scheme-handler http netsurf.desktop
+xdg-settings set default-url-scheme-handler https netsurf.desktop
