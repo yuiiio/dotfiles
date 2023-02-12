@@ -5,6 +5,8 @@ export DXVK_FILTER_DEVICE_NAME="UHD Graphics 630"
 export DXVK_HUD="devinfo,fps,frametimes,gpuload,version,api"
 export DXVK_CONFIG_FILE="$HOME/.config/dxvk.conf"
 
+#export VK_INSTANCE_LAYERS="VK_LAYER_MESA_overlay"
+
 #need 32bit path maybe
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/usr/local/lib32/pkgconfig:$PKG_CONFIG_PATH"
 export LD_LIBRARY_PATH="/usr/local/lib:/usr/local/lib32:$LD_LIBRARY_PATH"
