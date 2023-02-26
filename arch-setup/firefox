@@ -19,7 +19,7 @@ doh-rollout.doneFirstRun	true
 doh-rollout.home-region	JP
 extensions.lastAppVersion	110.0a1
 gfx.webrender.all	true
-gfx.webrender.compositor.force-enabled	true
+#hm webrender offload composite is not always works well and only avaiable in nighlty gfx.webrender.compositor.force-enabled	true
 idle.lastDailyNotification	1673799196
 media.ffmpeg.vaapi.enabled	true
 media.gmp-gmpopenh264.abi	x86_64-gcc3

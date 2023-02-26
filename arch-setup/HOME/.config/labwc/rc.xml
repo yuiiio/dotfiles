@@ -30,6 +30,7 @@
       <naturalScroll>yes</naturalScroll>
       <tap>yes</tap>
       <middleEmulation>no</middleEmulation>
+      <disableWhileTyping>no</disableWhileTyping>
     </device>
   </libinput>
 
