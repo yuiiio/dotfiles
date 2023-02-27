@@ -18,10 +18,52 @@
   </theme>
 
   <keyboard>
-    <default />
-    <!-- Use a different terminal emulator -->
+    <repeatRate>25</repeatRate>
+    <repeatDelay>600</repeatDelay>
+    <keybind key="A-Tab">
+      <action name="NextWindow" />
+    </keybind>
     <keybind key="W-Return">
       <action name="Execute" command="foot" />
+    </keybind>
+    <keybind key="A-F4">
+      <action name="Close" />
+    </keybind>
+    <keybind key="W-a">
+      <action name="ToggleMaximize" />
+    </keybind>
+    <keybind key="W-Left">
+      <action name="SnapToEdge" direction="left" />
+    </keybind>
+    <keybind key="W-Right">
+      <action name="SnapToEdge" direction="right" />
+    </keybind>
+    <keybind key="W-Up">
+      <action name="SnapToEdge" direction="up" />
+    </keybind>
+    <keybind key="W-Down">
+      <action name="SnapToEdge" direction="down" />
+    </keybind>
+    <keybind key="A-Space">
+      <action name="Execute" command="toggle_bemenu.sh" />
+    </keybind>
+    <keybind key="C-Space">
+      <action name="Execute" command="toggle_im.sh" />
+    </keybind>
+    <keybind key="XF86_AudioLowerVolume">
+      <action name="Execute" command="amixer sset Master 5%-" />
+    </keybind>
+    <keybind key="XF86_AudioRaiseVolume">
+      <action name="Execute" command="amixer sset Master 5%+" />
+    </keybind>
+    <keybind key="XF86_AudioMute">
+      <action name="Execute" command="amixer sset Master toggle" />
+    </keybind>
+    <keybind key="XF86_MonBrightnessUp">
+      <action name="Execute" command="brightnessctl set +10%" />
+    </keybind>
+    <keybind key="XF86_MonBrightnessDown">
+      <action name="Execute" command="brightnessctl set 10%-" />
     </keybind>
   </keyboard>
 
