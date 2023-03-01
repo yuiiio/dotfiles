@@ -24,6 +24,11 @@ export SDL_VIDEODRIVER="wayland"
 export QT_QPA_PLATFORM="wayland"
 export XDG_SESSION_TYPE="wayland"
 
+#export QT_XCB_GL_INTEGRATION="xcb_egl"
+#export QT_WAYLAND_CLIENT_BUFFER_INTEGRATION="wayland-egl"
+#export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
+#export QTWEBENGINE_CHROMIUM_FLAGS=" --enable-oop-rasterization --enable-gpu-rasterization --enable-native-gpu-memory-buffers --use-gl=desktop"
+
 #export LD_PRELOAD="libSDL2.so"
 
 #export GBM_BACKEND="nvidia-drm"
