@@ -69,6 +69,11 @@ https://github.com/wouterj/nord-gtk-theme.git
 #recommend web browser
 netsurf
 
+on firefox must set false these conifg for smooth scroll.
+apz.gtk.kinetic_scroll.enabled
+apz.gtk.pangesture.enabled
+apz.gtk.touchpad_pinch.enabled
+
 xdg-settings set default-web-browser netsurf.desktop
 xdg-settings set default-url-scheme-handler http netsurf.desktop
 xdg-settings set default-url-scheme-handler https netsurf.desktop
