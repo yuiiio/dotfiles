@@ -54,6 +54,7 @@ export WINE_DISABLE_FULLSCREEN_HACK="1"
 #export WINE_CPU_TOPOLOGY="4:0,1,2,3"
 
 export WINIT_UNIX_BACKEND="wayland"
+export WGPU_BACKEND="vulkan"
 
 export MESA_VK_WSI_PRESENT_MODE="immediate"
 
