@@ -140,6 +140,7 @@ user_pref("fission.experiment.max-origins.qualified", true);
 user_pref("gecko.handlerService.defaultHandlersVersion", 1);
 user_pref("gfx.blacklist.accelerated-canvas2d", 6);
 user_pref("gfx.blacklist.accelerated-canvas2d.failureid", "FEATURE_FAILURE_DL_BLOCKLIST_NO_ID");
+user_pref("gfx.canvas.accelerated.force-enabled", true);
 user_pref("gfx.webrender.all", true);
 user_pref("idle.lastDailyNotification", 1677901980);
 user_pref("layers.acceleration.force-enabled", true);

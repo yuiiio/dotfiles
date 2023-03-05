@@ -74,6 +74,9 @@ apz.gtk.kinetic_scroll.enabled
 apz.gtk.pangesture.enabled
 apz.gtk.touchpad_pinch.enabled
 
+enable canvas gpu accel
+gfx.canvas.accelerated.force-enabled
+
 xdg-settings set default-web-browser netsurf.desktop
 xdg-settings set default-url-scheme-handler http netsurf.desktop
 xdg-settings set default-url-scheme-handler https netsurf.desktop
