@@ -1,7 +1,7 @@
-image=/home/haibane/Downloads/ZfxITtn.jpeg
+image=/home/haibane/Downloads/dawnbringer-morgana.png
 
 color=2e3440ff
-scaling=fill
+scaling=center
 ignore-empty-password
 show-failed-attempts
 hide-keyboard-layout

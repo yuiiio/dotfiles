@@ -2,7 +2,7 @@
 
 # Set background color.
 #swaybg -c '#113344' >/dev/null 2>&1 &
-swaybg -i $HOME/Downloads/wRZrhjk.jpeg -m center >/dev/null 2>&1 &
+swaybg -i /home/haibane/Downloads/dawnbringer-morgana.png -m center >/dev/null 2>&1 &
 
 # Configure output directives such as mode, position, scale and transform.
 # Use wlr-randr to get your output names
