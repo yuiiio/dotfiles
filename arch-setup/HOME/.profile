@@ -60,3 +60,10 @@ export MESA_VK_WSI_PRESENT_MODE="immediate"
 
 export IGPU_CARD=`readlink -f /dev/dri/by-path/pci-0000:00:02.0-card`
 export WLR_DRM_DEVICES="$IGPU_CARD"
+
+
+#plasma build env
+#export CMAKE_PREFIX_PATH="$HOME/.plasma/usr/local/share/ECM"
+#export PATH="$HOME/.plasma/usr/local/bin:$PATH"
+#export PKG_CONFIG_PATH="$HOME/.plasma/usr/local/lib/pkgconfig:$HOME/.plasma/usr/local/lib32/pkgconfig:$PKG_CONFIG_PATH"
+#export LD_LIBRARY_PATH="$HOME/.plasma/usr/local/lib:$HOME/.plasma/usr/local/lib32:$LD_LIBRARY_PATH"
