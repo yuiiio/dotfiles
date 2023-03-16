@@ -67,7 +67,6 @@ export WLR_DRM_DEVICES="$IGPU_CARD"
 #export PKG_CONFIG_PATH="$HOME/kde/usr/lib/pkgconfig:$PKG_CONFIG_PATH"
 #export LD_LIBRARY_PATH="$HOME/kde/usr/lib:$LD_LIBRARY_PATH"
 
-#export CMAKE_PREFIX_PATH="$HOME/kde/usr"
 #export QML2_IMPORT_PATH="$HOME/kde/usr/lib/qml:$QML2_IMPORT_PATH"
 #export QT_PLUGIN_PATH="$HOME/kde/usr/lib/plugins:$QT_PLUGIN_PATH"  
 
