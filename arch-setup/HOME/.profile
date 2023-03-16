@@ -63,13 +63,13 @@ export WLR_DRM_DEVICES="$IGPU_CARD"
 
 
 #plasma build env
-export PATH="$HOME/kde/usr/bin:$PATH"
-export PKG_CONFIG_PATH="$HOME/kde/usr/lib/pkgconfig:$PKG_CONFIG_PATH"
-export LD_LIBRARY_PATH="$HOME/kde/usr/lib:$LD_LIBRARY_PATH"
+#export PATH="$HOME/kde/usr/bin:$PATH"
+#export PKG_CONFIG_PATH="$HOME/kde/usr/lib/pkgconfig:$PKG_CONFIG_PATH"
+#export LD_LIBRARY_PATH="$HOME/kde/usr/lib:$LD_LIBRARY_PATH"
 
 #export CMAKE_PREFIX_PATH="$HOME/kde/usr"
-export QML2_IMPORT_PATH="$HOME/kde/usr/lib/qml:$QML2_IMPORT_PATH"
-export QT_PLUGIN_PATH="$HOME/kde/usr/lib/plugins:$QT_PLUGIN_PATH"  
+#export QML2_IMPORT_PATH="$HOME/kde/usr/lib/qml:$QML2_IMPORT_PATH"
+#export QT_PLUGIN_PATH="$HOME/kde/usr/lib/plugins:$QT_PLUGIN_PATH"  
 
-export XDG_DATA_DIRS="$HOME/kde/usr/share:/usr/local/share:/usr/share:$XDG_DATA_DIRES"
-export XDG_CONFIG_DIRS="$HOME/kde/usr/etc/xdg:/etc/xdg"
+#export XDG_DATA_DIRS="$HOME/kde/usr/share:$HOME/.local/share:/usr/local/share:/usr/share:$XDG_DATA_DIRES"
+#export XDG_CONFIG_DIRS="$HOME/kde/usr/etc/xdg:/etc/xdg"

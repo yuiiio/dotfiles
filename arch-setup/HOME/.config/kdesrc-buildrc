@@ -53,7 +53,7 @@ end global
 # Common options that should be set for some KDE modules no matter how
 # kdesrc-build finds them. Do not comment these out unless you know
 # what you are doing.
-include /home/haibane/kde/src/kdesrc-build/kf6-common-options-build-include
+#include /home/haibane/kde/src/kdesrc-build/kf6-common-options-build-include
 
 # Refers to the qt6 file included as part of kdesrc-build. The file
 # is simply read-in at this point as if you'd typed it in yourself.
@@ -64,19 +64,22 @@ include /home/haibane/kde/src/kdesrc-build/kf6-common-options-build-include
 
 # Refers to the kf6-frameworks file included as part of kdesrc-build. The file
 # is simply read-in at this point as if you'd typed it in yourself.
-include /home/haibane/kde/src/kdesrc-build/kf6-frameworks-build-include
+#include /home/haibane/kde/src/kdesrc-build/kf6-frameworks-build-include
 
 # Refers to the kf6-workspace file included as part of kdesrc-build. The file
 # is simply read-in at this point as if you'd typed it in yourself.
-include /home/haibane/kde/src/kdesrc-build/kf6-workspace-build-include
+#include /home/haibane/kde/src/kdesrc-build/kf6-workspace-build-include
 
 # Refers to the kf6-applications file included as part of kdesrc-build. The file
 # is simply read-in at this point as if you'd typed it in yourself.
-include /home/haibane/kde/src/kdesrc-build/kf6-applications-build-include
+#include /home/haibane/kde/src/kdesrc-build/kf6-applications-build-include
 
 # Refers to the kf6-kdepim file included as part of kdesrc-build. The file
 # is simply read-in at this point as if you'd typed it in yourself.
 #include /home/haibane/kde/src/kdesrc-build/kf6-kdepim-build-include
+
+include /home/haibane/kde/src/kdesrc-build/kf6-qt6-build-include
+include /home/haibane/kde/src/kdesrc-build/kf6-extragear-build-include
 
 options selenium-webdriver-at-spi
     cmake-options -DBUILD_WITH_QT6=ON
