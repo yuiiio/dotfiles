@@ -1,5 +1,5 @@
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$PATH:$HOME/go/bin"
+#export PATH="$PATH:$HOME/go/bin"
 
 export DXVK_FILTER_DEVICE_NAME="UHD Graphics 630"
 export DXVK_HUD="devinfo,fps,frametimes,gpuload,version,api"
@@ -61,14 +61,3 @@ export MESA_VK_WSI_PRESENT_MODE="immediate"
 export IGPU_CARD=`readlink -f /dev/dri/by-path/pci-0000:00:02.0-card`
 export WLR_DRM_DEVICES="$IGPU_CARD"
 
-
-#plasma build env
-#export PATH="$HOME/kde/usr/bin:$PATH"
-#export PKG_CONFIG_PATH="$HOME/kde/usr/lib/pkgconfig:$PKG_CONFIG_PATH"
-#export LD_LIBRARY_PATH="$HOME/kde/usr/lib:$LD_LIBRARY_PATH"
-
-#export QML2_IMPORT_PATH="$HOME/kde/usr/lib/qml:$QML2_IMPORT_PATH"
-#export QT_PLUGIN_PATH="$HOME/kde/usr/lib/plugins:$QT_PLUGIN_PATH"  
-
-#export XDG_DATA_DIRS="$HOME/kde/usr/share:$HOME/.local/share:/usr/local/share:/usr/share:$XDG_DATA_DIRES"
-#export XDG_CONFIG_DIRS="$HOME/kde/usr/etc/xdg:/etc/xdg"
