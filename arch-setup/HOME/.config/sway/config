@@ -25,7 +25,8 @@ set $menu $HOME/.local/bin/toggle_bemenu.sh
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg /home/haibane/Downloads/dawnbringer-morgana.png center
+#output * bg /home/haibane/Downloads/dawnbringer-morgana.png center
+output * bg /home/haibane/Downloads/tea-girl.png center
 #output * bg /home/haibane/Downloads/wRZrhjk.jpeg fill
 #
 # Example configuration:
@@ -241,13 +242,13 @@ bindsym $mod+r mode "resize"
 bindsym Ctrl+space exec ~/.local/bin/toggle_im.sh
 
 # brightnessctl
-bindsym F4 exec brightnessctl s 1%-
-bindsym F5 exec brightnessctl s 1%+
+# bindsym F4 exec brightnessctl s 1%-
+# bindsym F5 exec brightnessctl s 1%+
 
 # volume control
-bindsym F1 exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym F2 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym F3 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+# bindsym F1 exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+# bindsym F2 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+# bindsym F3 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 
 bindsym F12 exec grim
 
