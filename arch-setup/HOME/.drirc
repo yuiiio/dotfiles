@@ -3,7 +3,7 @@
     <application>
       <option name="force_glsl_extensions_warn" value="false" />
       <option name="vk_xwayland_wait_ready" value="false" />
-      <option name="vk_x11_override_min_image_count" value="2" />
+      <option name="vk_x11_override_min_image_count" value="3" />
       <option name="mesa_no_error" value="true" />
     </application>
   </device>
