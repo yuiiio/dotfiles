@@ -1,0 +1,13 @@
+haibane	ALL=(root) NOPASSWD: /usr/bin/rmmod nvidia_uvm
+haibane ALL=(root) NOPASSWD: /usr/bin/rmmod nvidia_drm
+haibane ALL=(root) NOPASSWD: /usr/bin/rmmod nvidia_modeset
+haibane ALL=(root) NOPASSWD: /usr/bin/rmmod nvidia
+haibane ALL=(root) NOPASSWD: /usr/bin/rmmod nouveau
+
+haibane ALL=(root) NOPASSWD: /usr/bin/modprobe nouveau runpm=1 atomic=1
+haibane ALL=(root) NOPASSWD: /usr/bin/modprobe nvidia
+haibane ALL=(root) NOPASSWD: /usr/bin/modprobe nvidia_drm modeset=1
+haibane ALL=(root) NOPASSWD: /usr/bin/modprobe nvidia_modeset
+haibane ALL=(root) NOPASSWD: /usr/bin/modprobe nvidia_uvm
+
+haibane ALL=(root) NOPASSWD: /usr/bin/nvidia-modprobe -u -c=0
