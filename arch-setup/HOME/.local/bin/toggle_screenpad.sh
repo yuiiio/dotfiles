@@ -42,9 +42,10 @@ case $current_state in
         echo off > $state_file
         echo "off";;
     "off" )
-        MAIN_DISPLAY_BACKLIGHT=`cat /sys/class/backlight/intel_backlight/brightness`
+        # MAIN_DISPLAY_BACKLIGHT=`cat /sys/class/backlight/intel_backlight/brightness`
 
-        LEVEL=$(($MAIN_DISPLAY_BACKLIGHT / 470))
+        # LEVEL=$(($MAIN_DISPLAY_BACKLIGHT / 470))
+        LEVEL=100
         echo $LEVEL > /sys/class/leds/asus::screenpad/brightness
         echo on > $state_file
         echo "on";;
