@@ -116,13 +116,17 @@ by Miguel Avila
 */
 
 /* Tabs elements  */
+/*
 .tab-close-button {
   display: none;
 }
+*/
 
+/*
 .tabbrowser-tab:not([pinned]) .tab-icon-image {
   display: none !important;
 }
+*/
 
 #nav-bar:not([tabs-hidden='true']) {
   box-shadow: none;
@@ -155,9 +159,11 @@ by Miguel Avila
   padding-inline-end: 0 !important;
 }
 
+/*
 #tabs-newtab-button {
   padding-left: 4 !important;
 }
+*/
 
 /* Url Bar  */
 /*
