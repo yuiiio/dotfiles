@@ -71,6 +71,9 @@ gsettings set org.gnome.desktop.interface gtk-theme 'Nord-Dark-solid'
 
 gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 
+# konsole nord theme
+https://github.com/nordtheme/konsole.git
+
 #recommend web browser
 netsurf
 
