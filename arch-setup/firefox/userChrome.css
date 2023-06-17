@@ -17,11 +17,16 @@ by Miguel Avila
 └─┘└─┘┘└┘└  ┴└─┘└─┘┴└─┴ ┴ ┴ ┴└─┘┘└┘
 
 */
-/* #bdc3c7 */
-/* #4d4d4d */
+/* #bdc3c7 : 189,195,199 */
+/* #eff0f1 : 239 240 241 */
+/* #7f8c8d : 127 140 141 */
+/* #232627 : 35 38 39 */
+/* #4d4d4d : 77 77 77 */
+/* #232629 */
+/* #31363b */
 :root {
-  --sfwindow: #232629;
-  --sfsecondary: #31363b;
+  --sfwindow: #bdc3c7;
+  --sfsecondary: #eff0f1;
   --tab-max-height: 32px !important;
   --tab-min-height: 0 !important;
   --urlbar-toolbar-height: var(--tab-max-height) !important;
@@ -74,7 +79,7 @@ by Miguel Avila
   > .tab-background[selected='true'] {
   background-image: none !important;
   background-color: var(--toolbar-bgcolor) !important;
-  border: 1px solid #4d4d4d !important;
+  border: 1px solid var(--sfwindow) !important;
 }
 
 /* Inactive tabs color */
