@@ -24,9 +24,10 @@ by Miguel Avila
 /* #4d4d4d : 77 77 77 */
 /* #232629 */
 /* #31363b */
+/* #926ee4 : 146 110 228 purple */ 
 :root {
-  --sfwindow: #bdc3c7;
-  --sfsecondary: #eff0f1;
+  #--sfwindow: #bdc3c7;
+  #--sfsecondary: #eff0f1;
   --tab-max-height: 32px !important;
   --tab-min-height: 0 !important;
   --urlbar-toolbar-height: var(--tab-max-height) !important;
@@ -79,26 +80,26 @@ by Miguel Avila
   > .tab-background[selected='true'] {
   background-image: none !important;
   background-color: var(--toolbar-bgcolor) !important;
-  border: 1px solid var(--sfwindow) !important;
+  border: 1px solid #926ee4!important;
 }
 
 /* Inactive tabs color */
 #navigator-toolbox {
-  background-color: var(--sfwindow) !important;
+  #background-color: var(--sfwindow) !important;
 }
 
 :root
 .tab-background:not([selected]){
-    background-color: var(--sfwindow) !important;
+    #background-color: var(--sfwindow) !important;
     /* border: 1px solid white !important; */
 }
 
 /* Window colors  */
 :root {
-  --toolbar-bgcolor: var(--sfsecondary) !important;
-  --tabs-border-color: var(--sfsecondary) !important;
-  --lwt-sidebar-background-color: var(--sfwindow) !important;
-  --lwt-toolbar-field-focus: var(--sfsecondary) !important;
+  #--toolbar-bgcolor: var(--sfsecondary) !important;
+  #--tabs-border-color: var(--sfsecondary) !important;
+  #--lwt-sidebar-background-color: var(--sfwindow) !important;
+  #--lwt-toolbar-field-focus: var(--sfsecondary) !important;
 }
 
 /* Sidebar color  */
