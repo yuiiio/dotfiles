@@ -1,0 +1,11 @@
+[Unit]
+Description=Fix internal audio restore after Deep sleep  on ASUS Zenbook
+After=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/audio-wake-up.sh
+
+[Install]
+# Make it part of the sound initialization routine
+WantedBy=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
