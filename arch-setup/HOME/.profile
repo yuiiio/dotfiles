@@ -62,8 +62,5 @@ export MESA_VK_WSI_PRESENT_MODE="immediate"
 export IGPU_CARD=`readlink -f /dev/dri/by-path/pci-0000:00:02.0-card`
 export WLR_DRM_DEVICES="$IGPU_CARD"
 
-# for esp32 rust env
-. $HOME/export-esp.sh
-
 # for HZD on pascal
 # VKD3D_CONFIG=dxr,dxr11,no_upload_hvv VK_INSTANCE_LAYERS=VK_LAYER_MESA_overlay DXVK_FILTER_DEVICE_NAME="GTX 1050" PROTON_ENABLE_NVAPI=0 %command%
