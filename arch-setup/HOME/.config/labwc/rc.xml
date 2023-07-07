@@ -12,7 +12,7 @@
   </core>
 
   <theme>
-    <name></name>
+    <name>GTK</name>
     <cornerRadius>8</cornerRadius>
     <font name="sans" size="10" />
   </theme>
