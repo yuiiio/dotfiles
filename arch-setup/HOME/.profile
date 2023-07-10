@@ -86,8 +86,3 @@ export PATH="/usr/lib/ccache/bin/:$PATH"
 # ln -sf /usr/bin/ccache  /usr/lib/ccache/bin/i686-w64-mingw32-g++
 # ln -sf /usr/bin/ccache  /usr/lib/ccache/bin/i686-w64-mingw32-gcc
 # ln -sf /usr/bin/ccache  /usr/lib/ccache/bin/i686-w64-mingw32-gcc-$MINGW_GCC_VERSION
-
-# for plasma qt6 develop
-export PATH="/usr/lib/qt6/bin:$PATH"
-export LD_LIBRARY_PATH="/usr/lib/qt6:$LD_LIBRARY_PATH"
-# cmake ../ -DQT_MAJOR_VERSION=6 -DCMAKE_INSTALL_PREFIX:PATH=/usr/local -DCMAKE_INSTALL_LIBEXECDIR=lib
