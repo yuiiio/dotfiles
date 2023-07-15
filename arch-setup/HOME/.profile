@@ -46,8 +46,6 @@ export GTK_USE_PORTAL="0"
 export XKB_DEFAULT_OPTIONS="ctrl:nocaps"
 export XCURSOR_THEME="Adwaita"
 
-export __GL_SHADER_DISK_CACHE_SKIP_CLEANUP="1"
-
 export WLR_DRM_FORCE_LIBLIFTOFF="1"
 export WLR_SCENE_DEBUG_DAMAGE="0"
 
