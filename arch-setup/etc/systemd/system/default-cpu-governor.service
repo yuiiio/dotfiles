@@ -1,9 +1,0 @@
-[Unit]
-Description=Set default CPU governor
-After=multi-user.target
-
-[Service]
-ExecStart=/bin/bash -c '/usr/local/bin/select_gov.sh'
-
-[Install]
-WantedBy=multi-user.target

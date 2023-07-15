@@ -1,1 +1,0 @@
-WINIT_UNIX_BACKEND=x11 VK_INSTANCE_LAYERS="VK_LAYER_MESA_overlay" WGPU_BACKEND=vulkan VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/nvidia_icd.json" airshipper

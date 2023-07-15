@@ -4,5 +4,7 @@
 
 #LIBGL_DRIVERS_PATH=/home/haibane/intel_gl /home/haibane/gecko-dev/obj-x86_64-pc-linux-gnu/dist/bin/firefox -no-remote -profile /home/haibane/.mozilla/firefox/72ki92zy.default-nightly/
 
-LIBGL_DRIVERS_PATH=/home/haibane/intel_gl /usr/bin/firefox -no-remote -profile /home/haibane/.mozilla/firefox/bd7z1f65.default-nightly/
+# LIBGL_DRIVERS_PATH=/home/haibane/intel_gl /usr/bin/firefox -no-remote -profile /home/haibane/.mozilla/firefox/bd7z1f65.default-nightly/
+
+/usr/bin/firefox -no-remote -profile /home/haibane/.mozilla/firefox/bd7z1f65.default-nightly/
 

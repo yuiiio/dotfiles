@@ -1,5 +1,0 @@
-# rules for asus_nb_wmi devices
-
-# make screenpad backlight brightness write-able by everyone
-ACTION=="add", SUBSYSTEM=="leds", KERNEL=="asus::screenpad", RUN+="/bin/chmod a+w /sys/class/leds/%k/brightness"
-
