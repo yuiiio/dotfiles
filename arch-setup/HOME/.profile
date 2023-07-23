@@ -84,3 +84,8 @@ export PATH="/usr/lib/ccache/bin/:$PATH"
 # ln -sf /usr/bin/ccache  /usr/lib/ccache/bin/i686-w64-mingw32-g++
 # ln -sf /usr/bin/ccache  /usr/lib/ccache/bin/i686-w64-mingw32-gcc
 # ln -sf /usr/bin/ccache  /usr/lib/ccache/bin/i686-w64-mingw32-gcc-$MINGW_GCC_VERSION
+#
+
+# my desktop setup is 7950x + 6900xt
+# 7950x igpu is /dev/dri/by-path/pci-0000:0e:00.0-card 
+# 6900xt is /dev/dri/by-path/pci-0000:03:00.0-card
