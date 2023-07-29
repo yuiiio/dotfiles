@@ -1,8 +1,6 @@
 profile {
-	output eDP-1 mode 3840x2160 position 0,0
-	output HDMI-A-4 mode 1080x1920 position 480,1080 transform 90
-}
-
-profile {
-	output eDP-1 enable scale 2
+	output * adaptive_sync on
+    output * max_render_time 1
+    output * scale 1
+    output * scale_filter nearest
 }
