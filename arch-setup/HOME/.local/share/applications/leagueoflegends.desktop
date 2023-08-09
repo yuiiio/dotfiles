@@ -1,0 +1,20 @@
+[Desktop Entry]
+Categories=Application;Game
+Comment[en_US]=
+Comment=
+Encoding=UTF-8
+Exec=$HOME/.local/bin/leagueoflegends.sh
+GenericName[en_US]=League of Legends
+GenericName=League of Legends
+Icon=/home/haibane/.wine-lol/drive_c/ProgramData/Riot Games/Metadata/league_of_legends.live/league_of_legends.live.ico
+MimeType=
+Name[en_US]=League of Legends
+Name=League of Legends
+Path=
+StartupNotify=true
+StartupWMClass=leagueclientux.exe
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
