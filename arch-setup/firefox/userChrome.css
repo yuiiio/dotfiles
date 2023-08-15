@@ -1,3 +1,18 @@
+/* use tree style tab */
+#sidebar-header {
+  display: none;
+}
+
+#sidebar-box,
+#sidebar {
+  max-width: none !important;
+  min-width: 0px !important;
+}
+
+#TabsToolbar {
+  visibility: collapse !important;
+}
+
 /* 
 ┌─┐┬┌┬┐┌─┐┬  ┌─┐
 └─┐││││├─┘│  ├┤ 
