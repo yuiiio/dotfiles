@@ -34,7 +34,7 @@ export XDG_SESSION_TYPE="wayland"
 
 #export GBM_BACKEND="nvidia-drm"
 export PROTON_ENABLE_NVAPI="0"
-export WINEDLLOVERRIDES="winemenubuilder.exe=d;nvapi64=d;nvapi=d"
+export WINEDLLOVERRIDES="winemenubuilder.exe=d;nvapi64=d;nvapi=d;nvcuda=d;"
 
 export MOZ_DRM_DEVICE="$MOZ_WAYLAND_DRM_DEVICE"
 
