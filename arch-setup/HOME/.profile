@@ -6,6 +6,8 @@ export DXVK_HUD="devinfo,fps,frametimes,gpuload,version,api"
 export DXVK_CONFIG_FILE="$HOME/.config/dxvk.conf"
 export DXVK_LOG_LEVEL="none"
 
+export VKD3D_CONFIG="dxr"
+
 #export VK_INSTANCE_LAYERS="VK_LAYER_MESA_overlay"
 
 #need 32bit path maybe
