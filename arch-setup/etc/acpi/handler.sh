@@ -7,6 +7,9 @@ case "$1" in
             PBTN|PWRF)
                 logger 'PowerButton pressed'
                 ;;
+            LNXPWRBN)
+                logger 'PowerButtonLNX pressed'
+                ;;
             *)
                 logger "ACPI action undefined: $2"
                 ;;

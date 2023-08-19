@@ -51,11 +51,11 @@ output * scale_filter nearest
 #
 # Example configuration:
 #
- exec swayidle -w \
-          timeout 600 $HOME/.local/bin/sway_lock.sh \
-          resume 'swaymsg "output * power on"' \
-          timeout 620 $HOME/.local/bin/suspend_when_ac_offline.sh \
-          before-sleep $HOME/.local/bin/sway_lock.sh
+exec swayidle -w \
+         timeout 600 $HOME/.local/bin/sway_lock.sh \
+         resume 'swaymsg "output * power on"' \
+         timeout 620 $HOME/.local/bin/suspend_when_ac_offline.sh \
+         before-sleep $HOME/.local/bin/sway_lock.sh
 
           #timeout 610 $HOME/.local/bin/backlight_down.sh \
 #
