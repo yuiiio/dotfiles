@@ -7,3 +7,45 @@
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
 XMODIFIERS=@im=fcitx
+
+#need 32bit path maybe
+PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib32/pkgconfig
+LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib32
+
+__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json
+
+GDK_BACKEND=wayland
+MOZ_ENABLE_WAYLAND=1
+MOZ_WEBRENDER=1
+MOZ_DISABLE_RDD_SANDBOX=1
+
+SDL_VIDEODRIVER=wayland
+QT_QPA_PLATFORM=wayland
+XDG_SESSION_TYPE=wayland
+
+PROTON_ENABLE_NVAPI=0
+WINEDLLOVERRIDES=winemenubuilder.exe=d;nvapi64=d;nvapi=d;nvcuda=d;
+
+XDG_CURRENT_DESKTOP=wlroots
+GTK_USE_PORTAL=0
+
+# LIBVA_DRIVER_NAME="iHD"
+
+XKB_DEFAULT_OPTIONS=ctrl:nocaps
+# XCURSOR_THEME=Adwaita
+
+WLR_DRM_FORCE_LIBLIFTOFF=1
+WLR_SCENE_DEBUG_DAMAGE=0
+
+WINE_DISABLE_FULLSCREEN_HACK=1
+# WINE_CPU_TOPOLOGY=4:0,1,2,3
+
+WINIT_UNIX_BACKEND=wayland
+WGPU_BACKEND=vulkan
+
+MESA_VK_WSI_PRESENT_MODE=immediate
+
+WLR_RENDERER=gles2
+# WLR_RENDERER="vulkan"
+
+LABWC_ADAPTIVE_SYNC=1
