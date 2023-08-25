@@ -1,0 +1,7 @@
+#!/bin/bash -ex
+
+exec meson setup \
+  --buildtype     release \
+  -D              b_lto=true \
+  -D              b_pie=true \
+  "$@"
