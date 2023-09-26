@@ -1,0 +1,16 @@
+# window border
+window.active.border.color: #d8dee9
+window.inactive.border.color: #2e3440
+
+# window titlebar background
+window.active.title.bg.color: #d8dee9
+window.inactive.title.bg.color: #2e3440
+
+# window titlebar text
+window.active.label.text.color: #2e3440
+window.inactive.label.text.color: #d8dee9
+window.label.text.justify: center
+
+# window buttons
+window.active.button.unpressed.image.color: #2e3440
+window.inactive.button.unpressed.image.color: #d8dee9
