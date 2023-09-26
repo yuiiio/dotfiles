@@ -91,3 +91,6 @@ xdg-settings set default-url-scheme-handler https netsurf.desktop
 
 #cmake option
 cmake ../ -DCMAKE_INSTALL_PREFIX:PATH=/usr/local -DCMAKE_INSTALL_LIBEXECDIR=lib
+
+when build xwayland
+needs xorg-xkbcomp
