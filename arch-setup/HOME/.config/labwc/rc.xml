@@ -9,6 +9,7 @@
 
   <core>
     <gap>0</gap>
+    <adaptiveSync>yes</adaptiveSync>
   </core>
 
   <theme>
