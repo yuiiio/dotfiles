@@ -6,4 +6,4 @@ fcitx5 >/dev/null 2>&1 &
 swayidle -w \
     timeout 600 $HOME/.local/bin/sway_lock.sh \
     timeout 620 $HOME/.local/bin/suspend_when_ac_offline.sh \
-    before-sleep $HOME/.local/bin/sway_lock.sh >/dev/null 2>&1 &
+    before-sleep sway_lock >/dev/null 2>&1 &
