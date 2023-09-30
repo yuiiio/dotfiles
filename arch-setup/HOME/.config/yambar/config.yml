@@ -8,6 +8,20 @@ bar:
   spacing: 5
   margin: 7
   background: 2e3440ff
+  
+  left:
+    - i3:
+        content:
+          "":
+            map:
+              default: 
+                - string: {text: "{name}", margin: 0, font: *awesome}
+                - empty: {right-margin: 5}
+              conditions:
+                state == focused:
+                  - string: {text: "{name}", font: *awesome, foreground: 88c0d0ff}
+                  - empty: {right-margin: 5}
+          current: { string: {text: "{application}", font: *awesome}}
 
   right:
     - alsa:

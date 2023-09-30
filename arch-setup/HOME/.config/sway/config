@@ -231,7 +231,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # ime toggle
-bindsym Ctrl+space exec ~/.local/bin/toggle_im.sh
+# bindsym Ctrl+space exec ~/.local/bin/toggle_im.sh
 
 # brightnessctl
 bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
@@ -281,3 +281,4 @@ for_window [app_id="foot"] border pixel
 exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 
 exec yambar
+exec fcitx5
