@@ -26,7 +26,7 @@ set $menu $HOME/.local/bin/toggle_bemenu.sh
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #output * bg /home/haibane/Downloads/dawnbringer-morgana.png center
-output * bg /home/haibane/Downloads/12.png center
+output * bg /home/haibane/Downloads/tea-girl-wide2.png center
 #output * bg /home/haibane/Downloads/wRZrhjk.jpeg fill
 #
 # Example configuration:
@@ -75,12 +75,12 @@ exec swayidle -w \
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
-input "10182:3393:DELL0A77:00_27C6:0D41_Touchpad" {
-    dwt disabled
-    tap enabled
-    natural_scroll enabled
-    middle_emulation enabled
-}
+#input "10182:3393:DELL0A77:00_27C6:0D41_Touchpad" {
+#    dwt disabled
+#    tap enabled
+#    natural_scroll enabled
+#    middle_emulation enabled
+#}
 
 # Allow switching between workspaces with left and right swipes
  bindgesture swipe:right workspace prev

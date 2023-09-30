@@ -24,74 +24,31 @@ bar:
           current: { string: {text: "{application}", font: *awesome}}
 
   right:
-    - alsa:
-        card: hw:Generic_1
-        mixer: Master
-        content:
-          map:
-            conditions:
-              ~online: {string: {text: , font: *awesome, foreground: bf616aff}}
-              online:
-                map:
-                  on-click: /bin/sh -c "amixer -q sset Speaker unmute && amixer -q sset Headphone unmute && amixer -q sset Master toggle"
-                  conditions:
-                    muted: {string: {text: , font: *awesome, foreground: ffffff66}}
-                    ~muted:
-                      ramp:
-                        tag: percent
-                        items:
-                          - string: {text: , font: *awesome}
-                          - string: {text: , font: *awesome}
-                          - string: {text: , font: *awesome}
-    - battery:
-        name: BAT0
-        poll-interval: 30000
+    - pipewire:
         anchors:
-          discharging: &discharging
-            list:
-              items:
-                - ramp:
-                    tag: capacity
-                    items:
-                      - string: {text: , foreground: bf616aff, font: *awesome}
-                      - string: {text: , foreground: ffa600ff, font: *awesome}
-                      - string: {text: , font: *awesome}
-                      - string: {text: , font: *awesome}
-                      - string: {text: , font: *awesome}
-                      - string: {text: , font: *awesome}
-                      - string: {text: , font: *awesome}
-                      - string: {text: , font: *awesome}
-                      - string: {text: , font: *awesome}
-                      - string: {text: , foreground: 8fbcbbff, font: *awesome}
-                - string: {text: "{capacity}%"} # {estimate}"}
-        content:
-          map:
+          volume: &volume
             conditions:
-              state == unknown:
-                <<: *discharging
-              state == discharging:
-                <<: *discharging
-              state == charging:
-                - string: {text: , foreground: 8fbcbbff, font: *awesome}
-                - string: {text: "{capacity}%"} # {estimate}"}
-              state == full:
-                - string: {text: , foreground: 8fbcbbff, font: *awesome}
-                - string: {text: "{capacity}%"} # full"}
-              state == "not charging":
-                - ramp:
-                    tag: capacity
-                    items:
-                      - string: {text:  , foreground: bf616aff, font: *awesome}
-                      - string: {text:  , foreground: ffa600ff, font: *awesome}
-                      - string: {text:  , foreground: 8fbcbbff, font: *awesome}
-                      - string: {text:  , foreground: 8fbcbbff, font: *awesome}
-                      - string: {text:  , foreground: 8fbcbbff, font: *awesome}
-                      - string: {text:  , foreground: 8fbcbbff, font: *awesome}
-                      - string: {text:  , foreground: 8fbcbbff, font: *awesome}
-                      - string: {text:  , foreground: 8fbcbbff, font: *awesome}
-                      - string: {text:  , foreground: 8fbcbbff, font: *awesome}
-                      - string: {text:  , foreground: 8fbcbbff, font: *awesome}
-                - string: {text: "{capacity}%"}
+              muted: {string: {text: "{linear_volume}%", foreground: ff0000ff}}
+              ~muted: {string: {text: "{linear_volume}%"}}
+        content:
+          list:
+            items:
+              - map:
+                  conditions:
+                    type == "sink":
+                      map:
+                        conditions:
+                          icon == "audio-headset-bluetooth":
+                            string: {text: "🎧  "}
+                        default:
+                          - ramp:
+                              tag: linear_volume
+                              items:
+                                - string: {text: , font: *awesome}
+                                - string: {text: , font: *awesome}
+                                - string: {text: , font: *awesome}
+              - map:
+                  <<: *volume
     - clock:
         time-format: "%H:%M %Z"
         content:
