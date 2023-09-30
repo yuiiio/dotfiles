@@ -52,11 +52,11 @@ output * scale_filter nearest
 #
 exec swayidle -w \
          timeout 600 $HOME/.local/bin/sway_lock.sh \
+         timeout 610 $HOME/.local/bin/backlight_down.sh \
          resume 'swaymsg "output * power on"' \
          timeout 620 $HOME/.local/bin/suspend_when_ac_offline.sh \
          before-sleep $HOME/.local/bin/sway_lock.sh
 
-          #timeout 610 $HOME/.local/bin/backlight_down.sh \
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
