@@ -49,6 +49,55 @@ bar:
                                 - string: {text: , font: *awesome}
               - map:
                   <<: *volume
+    - battery:
+        name: BAT0
+        poll-interval: 30000
+        anchors:
+          discharging: &discharging
+            list:
+              items:
+                - ramp:
+                    tag: capacity
+                    items:
+                      - string: {text: , foreground: bf616aff, font: *awesome}
+                      - string: {text: , foreground: ffa600ff, font: *awesome}
+                      - string: {text: , font: *awesome}
+                      - string: {text: , font: *awesome}
+                      - string: {text: , font: *awesome}
+                      - string: {text: , font: *awesome}
+                      - string: {text: , font: *awesome}
+                      - string: {text: , font: *awesome}
+                      - string: {text: , font: *awesome}
+                      - string: {text: , foreground: 8fbcbbff, font: *awesome}
+                - string: {text: "{capacity}%"} # {estimate}"}
+        content:
+          map:
+            conditions:
+              state == unknown:
+                <<: *discharging
+              state == discharging:
+                <<: *discharging
+              state == charging:
+                - string: {text: , foreground: 8fbcbbff, font: *awesome}
+                - string: {text: "{capacity}%"} # {estimate}"}
+              state == full:
+                - string: {text: , foreground: 8fbcbbff, font: *awesome}
+                - string: {text: "{capacity}%"} # full"}
+              state == "not charging":
+                - ramp:
+                    tag: capacity
+                    items:
+                      - string: {text:  , foreground: bf616aff, font: *awesome}
+                      - string: {text:  , foreground: ffa600ff, font: *awesome}
+                      - string: {text:  , foreground: 8fbcbbff, font: *awesome}
+                      - string: {text:  , foreground: 8fbcbbff, font: *awesome}
+                      - string: {text:  , foreground: 8fbcbbff, font: *awesome}
+                      - string: {text:  , foreground: 8fbcbbff, font: *awesome}
+                      - string: {text:  , foreground: 8fbcbbff, font: *awesome}
+                      - string: {text:  , foreground: 8fbcbbff, font: *awesome}
+                      - string: {text:  , foreground: 8fbcbbff, font: *awesome}
+                      - string: {text:  , foreground: 8fbcbbff, font: *awesome}
+                - string: {text: "{capacity}%"}
     - clock:
         time-format: "%H:%M %Z"
         content:
