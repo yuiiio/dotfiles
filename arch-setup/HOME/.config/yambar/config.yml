@@ -11,6 +11,7 @@ bar:
   
   left:
     - i3:
+        sort: native
         content:
           "":
             map:
@@ -21,14 +22,16 @@ bar:
                 state == focused:
                   - string: {text: "{name}", font: *awesome, foreground: 88c0d0ff}
                   - empty: {right-margin: 5}
+  center:
+    - i3:
+        content:
           current: { string: {text: "{application}", font: *awesome}}
-
   right:
     - pipewire:
         anchors:
           volume: &volume
             conditions:
-              muted: {string: {text: "{linear_volume}%", foreground: ff0000ff}}
+              muted: {string: {text: "{linear_volume}%", foreground: bf616aff}}
               ~muted: {string: {text: "{linear_volume}%"}}
         content:
           list:
