@@ -8,6 +8,8 @@ export DXVK_LOG_LEVEL="none"
 
 export VKD3D_CONFIG="dxr"
 
+export SDL_GAMECONTROLLERCONFIG="030075c1091200000100000011010000,usbd-human-interface-device Rusty joystick,platform:Linux,a:b0,b:b1,x:b2,y:b3,back:b6,start:b7,leftstick:b9,rightstick:b10,leftshoulder:b4,rightshoulder:b5,dpup:h0.1,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,leftx:a0,lefty:a1,rightx:a3,righty:a4,lefttrigger:a2,righttrigger:a5,"
+
 #export VK_INSTANCE_LAYERS="VK_LAYER_MESA_overlay"
 
 #need 32bit path maybe
