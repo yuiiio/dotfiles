@@ -3,7 +3,7 @@ awesome: &awesome Font Awesome 6 Free:style=solid:pixelsize=14
 awesome_brands: &awesome_brands Font Awesome 6 Brands:pixelsize=16
 
 bar:
-  height: 26
+  height: 24 #26
   location: bottom
   spacing: 5
   margin: 7
