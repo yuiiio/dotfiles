@@ -8,7 +8,7 @@ bar:
   spacing: 5
   margin: 7
   background: 2e3440ff
-  
+
   left:
     - i3:
         sort: native
@@ -16,12 +16,12 @@ bar:
           "":
             map:
               default: 
-                - string: {text: "{name}", margin: 0, font: *awesome}
-                - empty: {right-margin: 5}
+                - string: {text: "{name}", margin: 5, font: *awesome, foreground: 88c0d0ff, on-click: "swaymsg --quiet workspace {name}"}
+                - empty: {right-margin: 0}
               conditions:
                 state == focused:
-                  - string: {text: "{name}", font: *awesome, foreground: 88c0d0ff}
-                  - empty: {right-margin: 5}
+                  - string: {text: "{name}", margin: 5, font: *awesome}
+                  - empty: {right-margin: 0}
   center:
     - i3:
         content:
@@ -31,8 +31,8 @@ bar:
         anchors:
           volume: &volume
             conditions:
-              muted: {string: {text: "{linear_volume}%", foreground: bf616aff}}
-              ~muted: {string: {text: "{linear_volume}%"}}
+              muted: {string: {text: "{linear_volume}%", foreground: bf616aff, on-click: "pavucontrol"}}
+              ~muted: {string: {text: "{linear_volume}%", on-click: "pavucontrol"}}
         content:
           list:
             items:
