@@ -25,7 +25,7 @@ bar:
   center:
     - i3:
         content:
-          current: { string: {text: "               {application}               ", font: *awesome, on-click: {wheel-up: "swaymsg --quiet workspace prev", wheel-down: "swaymsg --quiet workspace next"}}}
+          current: { string: {text: "{application}", font: *awesome}}
   right:
     - pipewire:
         anchors:
