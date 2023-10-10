@@ -79,7 +79,7 @@ input "10182:3393:DELL0A77:00_27C6:0D41_Touchpad" {
     dwt disabled
     tap enabled
     natural_scroll enabled
-    middle_emulation enabled
+    middle_emulation disabled
 }
 
 # Allow switching between workspaces with left and right swipes
@@ -274,7 +274,7 @@ default_border none
 focus_follows_mouse no
 for_window [app_id="foot"] border pixel
 
-#primary_selection disabled
+primary_selection disabled
 
 #focus_on_window_activation focus
 
