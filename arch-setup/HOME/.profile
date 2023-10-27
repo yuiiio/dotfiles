@@ -69,7 +69,6 @@ export SDL_GAMECONTROLLERCONFIG="030075c1091200000100000011010000,usbd-human-int
 # export LABWC_ADAPTIVE_SYNC="1"
 
 # export ENABLE_GAMESCOPE_WSI="0"
-# gamescope -w 2560 -h 1080 -W 2560 -H 1080 -f -S integer -- %command%
 
 # for HZD on pascal
 # VKD3D_CONFIG=dxr,dxr11,no_upload_hvv VK_INSTANCE_LAYERS=VK_LAYER_MESA_overlay DXVK_FILTER_DEVICE_NAME="GTX 1050" PROTON_ENABLE_NVAPI=0 %command%
