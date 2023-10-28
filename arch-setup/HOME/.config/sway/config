@@ -82,6 +82,10 @@ input "10182:3393:DELL0A77:00_27C6:0D41_Touchpad" {
     middle_emulation disabled
 }
 
+input "10182:3393:DELL0A77:00_27C6:0D41_Mouse" {
+    events disabled
+}
+
 # Allow switching between workspaces with left and right swipes
  bindgesture swipe:right workspace prev
  bindgesture swipe:left workspace next
