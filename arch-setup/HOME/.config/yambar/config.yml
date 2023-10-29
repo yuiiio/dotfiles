@@ -25,7 +25,14 @@ bar:
   center:
     - i3:
         content:
-          current: { string: {text: "{application}", font: *awesome}}
+          "":
+            map:
+              default: 
+                  - empty: {right-margin: 0}
+              conditions:
+                state == focused:
+                  - string: {text: "{application}", font: *awesome}
+
   right:
     - pipewire:
         anchors:
