@@ -1,6 +1,7 @@
-swaybg -i /home/haibane/Downloads/12.png >/dev/null 2>&1 &
+swaybg -i /home/haibane/Downloads/mountain.png >/dev/null 2>&1 &
 # swaybg -i /usr/share/wallpapers/Next/contents/images/1920x1080.png >/dev/null 2>&1 &
-yambar >/dev/null 2>&1 &
+#yambar >/dev/null 2>&1 &
+waybar >/dev/null 2>&1 &
 fcitx5 >/dev/null 2>&1 &
 
 swayidle -w \

@@ -26,8 +26,8 @@ set $menu $HOME/.local/bin/toggle_bemenu.sh
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #output * bg /home/haibane/Downloads/dawnbringer-morgana.png center
-output * bg /home/haibane/Downloads/12.png center
-#output * bg /home/haibane/Downloads/wRZrhjk.jpeg fill
+#output * bg /home/haibane/Downloads/12.png center
+output * bg /home/haibane/Downloads/mountain.png center
 #
 # Example configuration:
 #
