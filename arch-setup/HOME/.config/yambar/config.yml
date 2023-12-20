@@ -38,8 +38,8 @@ bar:
         anchors:
           volume: &volume
             conditions:
-              muted: {string: {text: "{linear_volume}%:{description}", foreground: bf616aff, on-click: "pavucontrol"}}
-              ~muted: {string: {text: "{linear_volume}%:{description}", on-click: "pavucontrol"}}
+              muted: {string: {text: "{linear_volume}%", foreground: bf616aff, on-click: "pavucontrol"}}
+              ~muted: {string: {text: "{linear_volume}%", on-click: "pavucontrol"}}
         content:
           list:
             items:
