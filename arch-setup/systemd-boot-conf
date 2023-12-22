@@ -1,5 +1,5 @@
 title	Frog-OS
-linux	/vmlinuz-linux66-tkg-eevdf
+linux	/vmlinuz-linux
 initrd	/amd-ucode.img
-initrd	/initramfs-linux66-tkg-eevdf.img
-options root=UUID=ec1c3082-c37d-4f29-a418-12f9c9e8ad78 rw quiet splash nowatchdog amdgpu.ppfeaturemask=0xfff7ffff
+initrd	/initramfs-linux.img
+options root=UUID=9d5a8866-155d-4576-86cf-89518150211e rw quiet splash nowatchdog amdgpu.ppfeaturemask=0xfff7ffff
