@@ -52,8 +52,8 @@ button:hover {
 #mode,
 #idle_inhibitor {
   margin: 1px;
-  padding-left: 2px;
-  padding-right: 2px;
+  padding-left: 0px;
+  padding-right: 0px;
   background-color: #4c566a;
   color: #ffffff;
 }
