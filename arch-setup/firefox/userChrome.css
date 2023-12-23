@@ -36,8 +36,8 @@
 
     /* enable rounded top corners */
     :root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]):not([customizing="true"]) #nav-bar {
-        border-top-left-radius: env(-moz-gtk-csd-titlebar-radius);
-        border-top-right-radius: env(-moz-gtk-csd-titlebar-radius);
+        border-top-left-radius: 0 important;
+        border-top-right-radius: 0 important;
     }
 
     /* window control padding values (these don't change the size of the actual buttons, only the padding for the navbar) */
@@ -163,8 +163,8 @@ by Miguel Avila
 /* #31363b */
 /* #926ee4 : 146 110 228 purple */ 
 :root {
-  #--sfwindow: #bdc3c7;
-  #--sfsecondary: #eff0f1;
+  --sfwindow: #81a1c1;
+  --sfsecondary: #d8dee9;
   --tab-max-height: 30px !important;
   --tab-min-height: 0 !important;
   --urlbar-toolbar-height: var(--tab-max-height) !important;
@@ -222,22 +222,29 @@ by Miguel Avila
 
 /* Inactive tabs color */
 #navigator-toolbox {
-  #background-color: var(--sfwindow) !important;
+  background-color: var(--sfwindow) !important;
 }
+
+#navigator-toolbox:-moz-window-inactive{
+  background-color: var(--sfsecondary) !important;
+}
+
 
 :root
 .tab-background:not([selected]){
-    #background-color: var(--sfwindow) !important;
+    /* background-color: var(--sfwindow) !important; */
     /* border: 1px solid white !important; */
 }
 
 /* Window colors  */
+/*
 :root {
-  #--toolbar-bgcolor: var(--sfsecondary) !important;
-  #--tabs-border-color: var(--sfsecondary) !important;
-  #--lwt-sidebar-background-color: var(--sfwindow) !important;
-  #--lwt-toolbar-field-focus: var(--sfsecondary) !important;
+  --toolbar-bgcolor: var(--sfsecondary) !important;
+  --tabs-border-color: var(--sfsecondary) !important;
+  --lwt-sidebar-background-color: var(--sfwindow) !important;
+  --lwt-toolbar-field-focus: var(--sfsecondary) !important;
 }
+*/
 
 /* Sidebar color  */
 /*
@@ -318,6 +325,7 @@ by Miguel Avila
 #urlbar-container {
   margin-left: 0 !important;
 }
+*/
 
 #urlbar[focused='true'] > #urlbar-background {
   box-shadow: none !important;
@@ -326,7 +334,6 @@ by Miguel Avila
 #navigator-toolbox {
   border: none !important;
 }
-*/
 
 /* Bookmarks bar  */
 /*
