@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": [ "wlr/taskbar" ],
     "modules-center": [],
-    "modules-right": ["idle_inhibitor", "network", "pulseaudio", "backlight", "battery", "tray", "clock"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "backlight", "battery", "tray", "clock"],
     "wlr/taskbar": {
         "tooltip": false,
         "icon-theme": "Adwaita",
@@ -54,20 +54,10 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "network": {
-        "tooltip": false,
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": " {ifname}",
-        // "tooltip-format": " {ifname} via {gwaddr}",
-        "format-linked": " {ifname} (No IP)",
-        "format-disconnected": "Disconnected ⚠ {ifname}",
-        // "format-alt": " {ifname}: {ipaddr}/{cidr}"
-    },
     "pulseaudio": {
         "tooltip": false,
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}\n {volume}%",
+        "format": "<span font=\"20\">{icon}</span>\n {volume}%",
         // "format": "{icon} {volume}%",
         "format-muted": " ",
         "format-icons": {
