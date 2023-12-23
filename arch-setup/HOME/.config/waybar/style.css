@@ -58,6 +58,13 @@ button:hover {
   color: #ffffff;
 }
 
+#wireplumber {
+    color: #ebcb8b;
+}
+#wireplumber.muted {
+    color: #d08770;
+}
+
 #tray {
   margin: 2px;
   padding-left: 2px;
