@@ -39,7 +39,7 @@
     "upower": {
         "tooltip": false,
         "tooltip-spacing": 0,
-        "show-icon": true,
+        "show-icon": false,
         "icon-size": 10,
         "hide-if-empty": true,
         "on-click": "",
@@ -50,7 +50,7 @@
         "tooltip": true,
         "tooltip-format": "{node_name}",
         "format": "<span font=\"8\">AUDIO</span>\n{volume}%",
-        "format-muted": " ",
+        "format-muted": "<span font=\"8\">AUDIO</span>\n ",
         "on-click": "pavucontrol"
     },
 }
