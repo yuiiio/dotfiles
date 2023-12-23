@@ -170,6 +170,14 @@ by Miguel Avila
   --urlbar-toolbar-height: var(--tab-max-height) !important;
 }
 
+#urlbar-background {
+    box-shadow: none !important;
+}
+
+#urlbar {
+    box-shadow: none !important;
+}
+
 /* Bar resizing */
 #nav-bar,
 .toolbar-items,
@@ -326,10 +334,6 @@ by Miguel Avila
   margin-left: 0 !important;
 }
 */
-
-#urlbar[focused='true'] > #urlbar-background {
-  box-shadow: none !important;
-}
 
 #navigator-toolbox {
   border: none !important;
