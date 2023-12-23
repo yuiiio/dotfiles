@@ -40,7 +40,7 @@ button:hover {
 }
 
 #clock,
-#battery,
+#upower,
 #cpu,
 #memory,
 #disk,
@@ -90,40 +90,12 @@ button:hover {
   /* font-weight: bold; */
 }
 
-#battery icon {
-  color: red;
+#upower.charging {
+    color: #a3be8c;
 }
 
-#battery.charging, #battery.plugged {
-  color: #ffffff;
-  background-color: #26A65B;
-}
-
-@keyframes blink {
-  to {
-    background-color: #ffffff;
-    color: #000000;
-  }
-}
-
-#battery.warning:not(.charging) {
-  background-color: #f53c3c;
-  color: #ffffff;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-#battery.critical:not(.charging) {
-  background-color: #f53c3c;
-  color: #ffffff;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+#upower.empty {
+    color: #bf616a;
 }
 
 label:focus {

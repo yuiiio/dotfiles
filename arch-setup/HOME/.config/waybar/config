@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": [ "wlr/taskbar" ],
     "modules-center": [],
-    "modules-right": ["idle_inhibitor", "wireplumber", "battery", "tray", "clock"],
+    "modules-right": ["idle_inhibitor", "wireplumber", "upower", "tray", "clock"],
     "wlr/taskbar": {
         "tooltip": false,
         "icon-theme": "Adwaita",
@@ -36,19 +36,15 @@
         // "format-alt": "{:%Y-%m-%d}"
         "format": "{:%m/%d\n%H:%M}",
     },
-    "battery": {
+    "upower": {
         "tooltip": false,
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon}\n{capacity}%",
-        "format-charging": " \n{capacity}%",
-        "format-plugged": " \n{capacity}%",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "tooltip-spacing": 0,
+        "show-icon": true,
+        "icon-size": 10,
+        "hide-if-empty": true,
+        "on-click": "",
+        "format": "{percentage}",
+        "format-alt": "{percentage}",
     },
     "wireplumber": {
         "tooltip": true,
