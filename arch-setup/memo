@@ -94,3 +94,6 @@ cmake ../ -DCMAKE_INSTALL_PREFIX:PATH=/usr/local -DCMAKE_INSTALL_LIBEXECDIR=lib
 
 when build xwayland
 needs xorg-xkbcomp
+
+# for waybar
+pacman -S libdbusmenu-gtk3 libpulse libnl libappindicator-gtk3 upower gtk-layer-shell libbsd chrono-date spdlog

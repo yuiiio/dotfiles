@@ -10,7 +10,7 @@ XMODIFIERS=@im=fcitx
 
 #need 32bit path maybe
 PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib32/pkgconfig
-LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib32
+# LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib32
 
 __EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/50_mesa.json
 

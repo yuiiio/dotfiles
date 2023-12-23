@@ -1,13 +1,13 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: "Noto Sans CJK KR Regular";
-  font-size: 13px;
+  font-size: 14px;
   min-height: 0;
 }
 
 window#waybar {
   /* background: none; */
-  background-color: #4c566a; 
+  background-color: #2e3440; 
   color: #4c566a;
 }
 
@@ -49,7 +49,6 @@ button:hover {
 #network,
 #pulseaudio,
 #wireplumber,
-#tray,
 #mode,
 #idle_inhibitor {
   margin: 2px;
@@ -59,11 +58,20 @@ button:hover {
   color: #ffffff;
 }
 
+#tray {
+  margin: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  background-color: #5e81ac;
+  color: #ffffff;
+}
+
 #taskbar button {
   border: 1px solid #4c566a;
 }
 
 #taskbar button.active {
+  background-color: #4c566a;
   border: 1px solid #81a1c1;
 }
 
@@ -79,7 +87,7 @@ button:hover {
 
 #clock {
   font-size:14px;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 #battery icon {
