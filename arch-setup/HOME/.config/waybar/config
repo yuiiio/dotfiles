@@ -29,10 +29,12 @@
         "spacing": 10
     },
     "clock": {
+        "interval": 60,
         "tooltip": false,
         // "timezone": "America/New_York",
         // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         // "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%m/%d\n%H:%M}",
     },
     "battery": {
         "tooltip": false,
