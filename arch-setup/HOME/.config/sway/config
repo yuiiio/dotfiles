@@ -276,6 +276,8 @@ input "type:keyboard" {
 
 default_border none
 focus_follows_mouse no
+focus_on_window_activation focus
+
 for_window [app_id="foot"] border pixel
 
 primary_selection disabled
