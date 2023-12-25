@@ -24,6 +24,9 @@
     <keybind key="W-Return">
       <action name="Execute" command="foot" />
     </keybind>
+    <keybind key="W-F">
+      <action name="ToggleFullscreen" />
+    </keybind>
     <keybind key="A-Space">
       <action name="Execute" command="toggle_bemenu.sh" />
     </keybind>
