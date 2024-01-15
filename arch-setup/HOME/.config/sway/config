@@ -248,7 +248,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl s 5%+
  bindsym XF86AudioLowerVolume exec amixer sset Master 5%-
  bindsym XF86AudioMute exec amixer sset Master toggle
 
-# bindsym F12 exec grim
+bindsym F12 exec grim
 
 #
 # Status Bar:
