@@ -38,6 +38,8 @@ output * bg /home/haibane/wallpapers/norm-wallpaper.png center
 #output eDP-1 resolution 3840x2160 position 0,0 scale 2
 #output HDMI-A-4 resolution 1080x1920 position 480,1080 scale 2 transform 90
 
+output DP-2 mode 2560x1080@99.943Hz
+
 output * adaptive_sync on
 
 output * scale 1
