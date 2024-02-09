@@ -8,6 +8,8 @@ export DXVK_LOG_LEVEL="none"
 
 export VKD3D_CONFIG="dxr"
 
+export RADV_DEBUG="nongg_gs"
+
 #export VK_INSTANCE_LAYERS="VK_LAYER_MESA_overlay"
 
 #need 32bit path maybe
