@@ -55,10 +55,7 @@ export SDL_GAMECONTROLLERCONFIG="030075c1091200000100000011010000,usbd-human-int
 # export WINE_DISABLE_FULLSCREEN_HACK="1"
 #export WINE_CPU_TOPOLOGY="4:0,1,2,3"
 
-# export WINIT_UNIX_BACKEND="wayland"
 # export WGPU_BACKEND="vulkan"
-
-# export MESA_VK_WSI_PRESENT_MODE="immediate"
 
 # export IGPU_CARD=`readlink -f /dev/dri/by-path/pci-0000:00:02.0-card`
 # export WLR_DRM_DEVICES="$IGPU_CARD"
