@@ -13,100 +13,9 @@
 }
 */
 
-@media (-moz-gtk-csd-available), 
-       (-moz-platform: linux) {
-    .browser-toolbar:not(.titlebar-color){
-        background-color: transparent !important;
-        box-shadow: none !important;
-    }
-
-    #TabsToolbar:not([customizing="true"]) {
-        visibility: collapse !important;
-    }
-
-    #toolbar-menubar {
-        padding-top: 0px !important;
-    }
-
-    :root:not([customizing="true"]) #toolbar-menubar[inactive]+#TabsToolbar .titlebar-buttonbox-container {
-        visibility: visible !important;
-        position: absolute;
-        top: var(--uc-win-ctrl-vertical-offset);
-        display: block;
-        z-index: 101;
-    }
-
-    :root[tabsintitlebar][sizemode="normal"]:not([gtktiledwindow="true"]):not([customizing="true"]) #nav-bar {
-        border-top-left-radius: 0 important;
-        border-top-right-radius: 0 important;
-    }
-
-    :root[tabsintitlebar]:not([customizing="true"]) {
-        --uc-win-ctrl-btn-width: 38px;
-        --uc-win-ctrl-padding: 12px;
-        --uc-win-ctrl-vertical-offset: 4px;
-        --uc-win-ctrl-drag-space: 20px;
-    }
-
-    :root[tabsintitlebar][lwtheme]:not([customizing="true"]) {
-        --uc-win-ctrl-btn-width: 30px;
-        --uc-win-ctrl-padding: 12px;
-        --uc-win-ctrl-vertical-offset: 5px;
-        --uc-win-ctrl-drag-space: 20px;
-    }
-
-    @media (-moz-gtk-csd-minimize-button),
-    (-moz-gtk-csd-maximize-button),
-    (-moz-gtk-csd-close-button) {
-        #nav-bar {
-            --uc-navbar-padding: calc(var(--uc-win-ctrl-btn-width) * 1);
-        }
-    }
-
-    @media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button),
-    (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button),
-    (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
-        #nav-bar {
-            --uc-navbar-padding: calc(var(--uc-win-ctrl-btn-width) * 2);
-        }
-    }
-
-    @media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
-        #nav-bar {
-            --uc-navbar-padding: calc(var(--uc-win-ctrl-btn-width) * 3);
-        }
-    }
-
-    @media (-moz-gtk-csd-minimize-button),
-    (-moz-gtk-csd-maximize-button),
-    (-moz-gtk-csd-close-button) {
-        @media not (-moz-gtk-csd-reversed-placement) {
-            #nav-bar {
-                padding-inline: 0 calc(var(--uc-navbar-padding, 0) + var(--uc-win-ctrl-padding) + var(--uc-win-ctrl-drag-space)) !important;
-            }
-
-            .titlebar-buttonbox-container {
-                right: 0;
-            }
-        }
-
-        @media (-moz-gtk-csd-reversed-placement) {
-            #nav-bar {
-                padding-inline: calc(var(--uc-navbar-padding, 0) + var(--uc-win-ctrl-padding) + var(--uc-win-ctrl-drag-space)) 0 !important;
-            }
-
-            .titlebar-buttonbox-container {
-                left: 0;
-            }
-        }
-    }
-    
-    #navigator-toolbox[style*="margin-top: -"] .titlebar-buttonbox-container,
-    [inDOMFullscreen="true"] .titlebar-buttonbox-container {
-        transform: translateY(-100px)
-    }
-    
-    
+.browser-toolbar:not(.titlebar-color){
+    background-color: transparent !important;
+    box-shadow: none !important;
 }
 
 /* use tree style tab */
@@ -154,7 +63,7 @@ by Miguel Avila
 :root {
   --sfwindow: #d8dee9;
   --sfsecondary: #81a1c1;
-  --tab-max-height: 30px !important;
+  --tab-max-height: 26px !important;
   --tab-min-height: 0 !important;
   --urlbar-toolbar-height: var(--tab-max-height) !important;
 }
