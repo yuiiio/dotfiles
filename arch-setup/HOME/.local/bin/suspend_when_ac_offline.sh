@@ -2,7 +2,7 @@
 
 if cat /sys/class/power_supply/AC/online | grep 0 > /dev/null 2>&1
 then
-    if pgrep steam >/dev/null || pgrep wine >/dev/null; then
+    if pgrep steam >/dev/null || pgrep wine || pgrep rpcs3 >/dev/null; then
         echo "steam or wine running"
     else
         systemctl suspend
