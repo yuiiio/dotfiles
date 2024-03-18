@@ -1,0 +1,8 @@
+[Unit]
+Description=Dell laptop thermal monitor and control fan
+
+[Service]
+ExecStart=/usr/local/bin/dlfcd
+
+[Install]
+WantedBy=multi-user.target
