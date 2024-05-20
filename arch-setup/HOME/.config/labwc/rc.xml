@@ -15,6 +15,7 @@
   <theme>
     <name></name>
     <cornerRadius>0</cornerRadius>
+    <keepBorder>no</keepBorder>
     <font name="sans" size="10" />
   </theme>
 
@@ -26,6 +27,9 @@
     </keybind>
     <keybind key="W-F">
       <action name="ToggleFullscreen" />
+    </keybind>
+    <keybind key="W-D">
+      <action name="ToggleDecorations" />
     </keybind>
     <keybind key="A-Space">
       <action name="Execute" command="toggle_bemenu.sh" />
