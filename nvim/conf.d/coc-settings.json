@@ -1,74 +1,11 @@
 {
-  "python.venvPath": ".venv",
-  "python.linting.flake8Enabled": true,
-  "python.linting.mypyEnabled": true,
-  "pyright.disableDiagnostics": true,
-  "svelte.enable-ts-plugin": true,
-  "zig.enabled": true,
-  "zig.path": "zls",
-  "languageserver": {
-    "rust": {
-      "command": "~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rust-analyzer",
-      "filetypes": ["rust"],
-      "rootPatterns": ["Cargo.toml"]
-    },
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod"],
-      "filetypes": ["go"]
-    },
-    "nim": {
-      "command": "nimlsp",
-      "filetypes": ["nim"]
-    },
-    "vala": {
-      "command": "vala-language-server",
-      "filetypes": ["vala", "genie"]
-    },
-    "tailwind-lsp": {
-      "command": "tailwindcss-language-server",
-      "args": ["--stdio"],
-
-      "filetypes": [
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        "svelte"
-      ],
-
-      "rootPatterns": [
-        "tailwind.config.cjs",
-        "tailwind.config.js",
-        "tailwind.config.ts",
-        "postcss.config.cts",
-        "postcss.config.js",
-        "postcss.config.ts",
-        "package.json",
-        "node_modules",
-        ".git"
-      ],
-      "settings": {
-        "tailwindCSS": {
-          "validate": true,
-          "lint": {
-            "cssConflict": "warning",
-            "invalidApply": "error",
-            "invalidScreen": "error",
-            "invalidVariant": "error",
-            "invalidConfigPath": "error",
-            "invalidTailwindDirective": "error",
-            "recommendedVariantOrder": "warning"
-          },
-          "classAttributes": ["class", "className", "classList", "ngClass"],
-          "experimental": {}
-        }
-      }
-    },
-    "efm": {
-      "command": "efm-langserver",
-      "args": [],
-      "filetypes": ["*"]
-    }
-  }
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.inlayHints.renderColons": false,
+    "rust-analyzer.inlayHints.typeHints.hideNamedConstructor": false,
+    "rust-analyzer.inlayHints.chainingHints.enable": false,
+    "rust-analyzer.inlayHints.bindingModeHints.enable": false,
+    "rust-analyzer.inlayHints.closureReturnTypeHints.enable": false,
+    "analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.maxLength": 0
 }
