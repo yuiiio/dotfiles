@@ -7,5 +7,10 @@
     "rust-analyzer.inlayHints.bindingModeHints.enable": false,
     "rust-analyzer.inlayHints.closureReturnTypeHints.enable": false,
     "analyzer.inlayHints.parameterHints.enable": false,
-    "rust-analyzer.inlayHints.maxLength": 0
+    "rust-analyzer.inlayHints.maxLength": 0,
+    "workspace.ignoredFolders": [
+        "$HOME",
+        "$HOME/.cargo/**",
+        "$HOME/.rustup/**"
+    ]
 }
