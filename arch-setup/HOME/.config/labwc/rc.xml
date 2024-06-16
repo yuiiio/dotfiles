@@ -31,6 +31,10 @@
     <region name="top-right"    x="50%" y="0%"  height="50%"  width="50%"  />
   </regions>
 
+  <resize>
+      <drawContents>no</drawContents>
+  </resize>
+
   <keyboard>
     <default />
     <!-- SnapToRegion via W-Numpad -->
