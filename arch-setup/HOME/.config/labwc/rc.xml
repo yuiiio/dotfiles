@@ -19,6 +19,10 @@
     <font name="sans" size="10" />
   </theme>
 
+  <placement>
+    <policy>center</policy>
+  </placement>
+
   <regions>
     <region name="bottom"       x="0%"  y="50%" height="50%"  width="100%" />
     <region name="bottom-left"  x="0%"  y="50%" height="50%"  width="50%"  />
