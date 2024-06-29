@@ -71,6 +71,9 @@ gsettings set org.gnome.desktop.interface gtk-theme 'Nord-Dark-solid'
 
 gsettings set org.gnome.desktop.interface cursor-theme Adwaita
 
+# disable gtk animation
+gsettings set org.gnome.desktop.interface enable-animations false
+
 # konsole nord theme
 https://github.com/nordtheme/konsole.git
 
