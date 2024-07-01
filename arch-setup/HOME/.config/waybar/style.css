@@ -50,12 +50,17 @@ button:hover {
 #pulseaudio,
 #wireplumber,
 #mode,
+#custom-gpuclock,
 #idle_inhibitor {
   margin: 1px;
   padding-left: 0px;
   padding-right: 0px;
   background-color: #4c566a;
   color: #ffffff;
+}
+
+#custom-gpuclock {
+  font-size:15px;
 }
 
 #wireplumber {

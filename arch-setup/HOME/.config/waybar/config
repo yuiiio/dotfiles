@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": [ "wlr/taskbar" ],
     "modules-center": [],
-    "modules-right": ["idle_inhibitor", "wireplumber", "upower", "tray", "clock"],
+    "modules-right": ["idle_inhibitor", "custom/gpuclock", "wireplumber", "upower", "tray", "clock"],
     "wlr/taskbar": {
         "tooltip": false,
         "icon-theme": "Adwaita",
@@ -53,5 +53,14 @@
         "format-muted": "<span font=\"8\">AUDIO</span>\n ",
         "on-click": "pavucontrol"
     },
+    "custom/gpuclock": { //toggle auto, manual(1200)
+        "tooltip": false,
+        "format": "🕹 CL\n{}",
+        "interval": "once",
+        "exec": "sleep 0.1; $HOME/.local/bin/show-current-gpu-clock.sh", //sleep needs for wait toggle-gpu-clock.sh 
+        "exec-if": "exit 0",
+        "exec-on-event": true,
+        "on-click": "$HOME/.local/bin/toggle-gpu-clock.sh",
+    }
 }
 
