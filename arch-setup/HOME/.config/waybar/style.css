@@ -61,6 +61,8 @@ button:hover {
 
 #custom-gpuclock {
   font-size:15px;
+  background-color: #e5e9f0;
+  color: #2e3440;
 }
 
 #wireplumber {
