@@ -7,6 +7,6 @@ fcitx5 >/dev/null 2>&1 &
 swayidle -w \
     timeout 600 $HOME/.local/bin/sway_lock.sh \
     timeout 610 $HOME/.local/bin/backlight_down.sh \
-    resume 'wayout --on eDP-1' \
+    resume 'wlopm --on \*' \
     timeout 620 $HOME/.local/bin/suspend_when_ac_offline.sh \
     before-sleep swaylock >/dev/null 2>&1 &
