@@ -1,5 +1,5 @@
 bindkey -v
-bindkey "jj" vi-cmd-mode
+#bindkey "jj" vi-cmd-mode
 stty stop undef
 
 ### zsh history
