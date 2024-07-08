@@ -170,3 +170,5 @@ alias vi="nvim"
 alias vim="nvim"
 alias ssh="TERM=xterm ssh"
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
+
+alias mvi='mpv --config-dir=$HOME/.config/mvi'
