@@ -1,0 +1,1 @@
+/home/haibane/dotfiles/arch-setup/HOME/.local/bin/show-current-cpu-clock.sh
