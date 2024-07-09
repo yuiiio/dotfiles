@@ -51,7 +51,9 @@
         "tooltip-format": "{node_name}",
         "format": "<span font=\"8\">AUDIO</span>\n{volume}%",
         "format-muted": "<span font=\"8\">AUDIO</span>\n ",
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "reverse-scrolling": 1,
+        "scroll-step": 1.0,
     },
     "custom/cpuclock": { //toggle cpu max freq, 4.4GHz and 1.8GHz
         "tooltip": false,
