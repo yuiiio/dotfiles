@@ -58,7 +58,7 @@
       <action name="ToggleDecorations" />
     </keybind>
     <keybind key="A-Space">
-      <action name="Execute" command="toggle_fuzzel.sh" />
+      <action name="Execute" command="toggle_bemenu.sh" />
     </keybind>
     <keybind key="XF86_AudioLowerVolume">
       <action name="Execute" command="amixer sset Master 5%-" />
