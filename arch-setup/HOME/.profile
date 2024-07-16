@@ -13,21 +13,22 @@ export RADV_DEBUG="nongg_gs"
 #export VK_INSTANCE_LAYERS="VK_LAYER_MESA_overlay"
 
 #need 32bit path maybe
-# export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/usr/local/lib32/pkgconfig:$PKG_CONFIG_PATH"
-# export LD_LIBRARY_PATH="/usr/local/lib:/usr/local/lib32:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/usr/local/lib32/pkgconfig:$PKG_CONFIG_PATH"
+# use ldconfig /etc/ld.so.conf.d/local.conf instead
+#export LD_LIBRARY_PATH="/usr/local/lib:/usr/local/lib32:$LD_LIBRARY_PATH"
 
 # export __EGL_VENDOR_LIBRARY_FILENAMES="/usr/share/glvnd/egl_vendor.d/50_mesa.json"
 
 # export IGPU_RENDER=`readlink -f /dev/dri/by-path/pci-0000:00:02.0-render`
 # export MOZ_WAYLAND_DRM_DEVICE="$IGPU_RENDER"
-# export GDK_BACKEND="wayland"
-# export MOZ_ENABLE_WAYLAND="1"
-# export MOZ_WEBRENDER="1"
+export GDK_BACKEND="wayland"
+export MOZ_ENABLE_WAYLAND="1"
+export MOZ_WEBRENDER="1"
 # export MOZ_DISABLE_RDD_SANDBOX="1"
 
-# export SDL_VIDEODRIVER="wayland"
-# export QT_QPA_PLATFORM="wayland"
-# export XDG_SESSION_TYPE="wayland"
+export SDL_VIDEODRIVER="wayland"
+export QT_QPA_PLATFORM="wayland"
+export XDG_SESSION_TYPE="wayland"
 
 #export QT_XCB_GL_INTEGRATION="xcb_egl"
 #export QT_WAYLAND_CLIENT_BUFFER_INTEGRATION="wayland-egl"
@@ -36,39 +37,35 @@ export RADV_DEBUG="nongg_gs"
 
 #export LD_PRELOAD="libSDL2.so"
 
-# export PROTON_ENABLE_NVAPI="0"
-# export WINEDLLOVERRIDES="winemenubuilder.exe=d;nvapi64=d;nvapi=d;nvcuda=d;"
+export PROTON_ENABLE_NVAPI="0"
+export WINEDLLOVERRIDES="winemenubuilder.exe=d;nvapi64=d;nvapi=d;nvcuda=d;"
 
 # export MOZ_DRM_DEVICE="$MOZ_WAYLAND_DRM_DEVICE"
 
-# export XDG_CURRENT_DESKTOP="wlroots"
-# export GTK_USE_PORTAL="0"
+export XDG_CURRENT_DESKTOP="wlroots"
+export GTK_USE_PORTAL="0"
 
 # export LIBVA_DRIVER_NAME="iHD"
 
-# export XKB_DEFAULT_OPTIONS="ctrl:nocaps"
-# export XCURSOR_THEME="Adwaita"
+export XKB_DEFAULT_OPTIONS="ctrl:nocaps"
+#export XCURSOR_THEME="Adwaita"
 
-# export WLR_DRM_FORCE_LIBLIFTOFF="1"
-# export WLR_SCENE_DEBUG_DAMAGE="0"
+export WLR_DRM_FORCE_LIBLIFTOFF="1"
+export WLR_SCENE_DEBUG_DAMAGE="0"
+export WLR_SCENE_HIGHLIGHT_TRANSPARENT_REGION="0"
 
-# export WINE_DISABLE_FULLSCREEN_HACK="1"
-#export WINE_CPU_TOPOLOGY="4:0,1,2,3"
+export WINE_DISABLE_FULLSCREEN_HACK="1"
+# export WINE_CPU_TOPOLOGY="8:0,1,2,3,4,5,6,7"
 
-# export WGPU_BACKEND="vulkan"
+export WGPU_BACKEND="vulkan"
 
 # export IGPU_CARD=`readlink -f /dev/dri/by-path/pci-0000:00:02.0-card`
 # export WLR_DRM_DEVICES="$IGPU_CARD"
 
 # export WLR_RENDERER="gles2"
-# export WLR_RENDERER="vulkan"
+export WLR_RENDERER="vulkan"
 
-# export LABWC_ADAPTIVE_SYNC="1"
-
-# export ENABLE_GAMESCOPE_WSI="0"
-
-# for HZD on pascal
-# VKD3D_CONFIG=dxr,dxr11,no_upload_hvv VK_INSTANCE_LAYERS=VK_LAYER_MESA_overlay DXVK_FILTER_DEVICE_NAME="GTX 1050" PROTON_ENABLE_NVAPI=0 %command%
+export LABWC_ADAPTIVE_SYNC="1"
 
 # for ccache
 export PATH="/usr/lib/ccache/bin/:$PATH"
