@@ -97,3 +97,5 @@ needs xorg-xkbcomp
 
 # for waybar
 upower spdlog gtk-layer-shell
+
+pacman -Rdd kwallet baloo geoclue 
