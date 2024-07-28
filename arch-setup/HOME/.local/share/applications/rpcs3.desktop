@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=RPCS3
+Comment=Play PS3 Games
+Icon=/home/haibane/rpcs3/rpcs3/rpcs3.png
+Exec=/usr/bin/sh -c "/home/haibane/.local/bin/rpcs3.sh"
+Terminal=false
+Categories=Game;
+MimeType=
+StartupWMClass=

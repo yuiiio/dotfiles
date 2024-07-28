@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=mvi (alias of mpv)
+Comment=Play Images
+Icon=mpv
+Exec=mpv --config-dir=/home/haibane/.config/mvi -- %U
+Terminal=false
+Categories=Graphics;2DGraphics;RasterGraphics;Viewer;
+MimeType=image/bmp;image/gif;image/jpeg;image/jpg;image/pjpeg;image/png;image/tiff;image/webp;image/x-bmp;image/x-gray;image/x-icb;image/x-ico;image/x-png;image/x-portable-anymap;image/x-portable-bitmap;image/x-portable-graymap;image/x-portable-pixmap;image/x-xbitmap;image/x-xpixmap;image/x-pcx;image/svg+xml;image/svg+xml-compressed;image/vnd.wap.wbmp;image/x-icns;
+StartupWMClass=mpv
+Keywords=mvi;mpv;media;player;image;Picture;Slideshow;Graphics;
