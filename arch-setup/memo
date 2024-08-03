@@ -97,3 +97,7 @@ cmake ../ -DCMAKE_INSTALL_PREFIX:PATH=/usr/local -DCMAKE_INSTALL_LIBEXECDIR=lib
 
 when build xwayland
 needs xorg-xkbcomp
+
+# rpcs3
+# use audio backend cubeb instead of faudio
+# cubeb provides better (not jumping)
