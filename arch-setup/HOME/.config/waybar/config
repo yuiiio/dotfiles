@@ -59,7 +59,7 @@
         "tooltip": false,
         "format": "MX\n{}",
         "interval": "once",
-        "exec": "sleep 0.1; $HOME/.local/bin/show-current-cpu-max-clock.sh",
+        "exec": "sleep 0.5; $HOME/.local/bin/show-current-cpu-max-clock.sh",
         "exec-if": "exit 0",
         "exec-on-event": true,
         "on-click": "$HOME/.local/bin/toggle-cpu-max-clock.sh",
@@ -68,7 +68,7 @@
         "tooltip": false,
         "format": "🕹 CL\n{}",
         "interval": "once",
-        "exec": "sleep 0.1; $HOME/.local/bin/show-current-gpu-clock.sh", //sleep needs for wait toggle-gpu-clock.sh 
+        "exec": "sleep 0.5; $HOME/.local/bin/show-current-gpu-clock.sh", //sleep needs for wait toggle-gpu-clock.sh 
         "exec-if": "exit 0",
         "exec-on-event": true,
         "on-click": "$HOME/.local/bin/toggle-gpu-clock.sh",
