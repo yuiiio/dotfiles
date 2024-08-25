@@ -62,7 +62,8 @@
         "exec": "sleep 0.5; $HOME/.local/bin/show-current-cpu-max-clock.sh",
         "exec-if": "exit 0",
         "exec-on-event": true,
-        "on-click": "$HOME/.local/bin/toggle-cpu-max-clock.sh",
+        "on-click": "$HOME/.local/bin/toggle-cpu-max-clock.sh 1",
+        "on-click-right": "$HOME/.local/bin/toggle-cpu-max-clock.sh 2",
     },
     "custom/gpuclock": { //toggle gpu clock, auto, manual(1200)
         "tooltip": false,
@@ -71,7 +72,8 @@
         "exec": "sleep 0.5; $HOME/.local/bin/show-current-gpu-clock.sh", //sleep needs for wait toggle-gpu-clock.sh 
         "exec-if": "exit 0",
         "exec-on-event": true,
-        "on-click": "$HOME/.local/bin/toggle-gpu-clock.sh",
+        "on-click": "$HOME/.local/bin/toggle-gpu-clock.sh 1",
+        "on-click-right": "$HOME/.local/bin/toggle-gpu-clock.sh 2",
     }
 }
 
