@@ -1,3 +1,4 @@
+export MESA_SHADER_CACHE_DIR="$HOME/.cache/mesa_shader_cache_db"
 export PATH="$HOME/.local/bin:$PATH"
 #export PATH="$PATH:$HOME/go/bin"
 
