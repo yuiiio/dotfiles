@@ -9,7 +9,7 @@
 
   <core>
     <gap>0</gap>
-    <adaptiveSync>yes</adaptiveSync>
+    <adaptiveSync>fullscreen</adaptiveSync>
   </core>
 
   <theme>
