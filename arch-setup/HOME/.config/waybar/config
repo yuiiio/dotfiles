@@ -12,7 +12,7 @@
         "tooltip": false,
         "icon-theme": "Adwaita",
         "format": "{icon}",
-        "icon-size": 24,
+        "icon-size": 20,
         "on-click": "activate"
     },
     "idle_inhibitor": {
