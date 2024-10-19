@@ -27,7 +27,7 @@ export MOZ_ENABLE_WAYLAND="1"
 export MOZ_WEBRENDER="1"
 # export MOZ_DISABLE_RDD_SANDBOX="1"
 
-export SDL_VIDEODRIVER="wayland"
+#export SDL_VIDEODRIVER="wayland"
 export QT_QPA_PLATFORM="wayland"
 export XDG_SESSION_TYPE="wayland"
 
