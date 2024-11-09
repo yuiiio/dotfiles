@@ -68,11 +68,6 @@
         }
       }
     },
-    "efm": {
-      "command": "efm-langserver",
-      "args": [],
-      "filetypes": ["*"]
-    },
     "crystal": {
       "command": "crystalline",
       "args": [
