@@ -20,7 +20,7 @@
   </theme>
 
   <placement>
-    <policy>center</policy>
+    <policy>cascade</policy>
   </placement>
 
   <regions>
@@ -114,7 +114,7 @@
         <action name="None" />
       </mousebind>
     </context>
-    
+
     <context name="TitleBar">
       <mousebind direction="Up" action="Scroll">
         <action name="None" />
@@ -124,7 +124,7 @@
       </mousebind>
     </context>
   </mouse>
-  
+
   <libinput>
     <device category="DELL0A77:00 27C6:0D41 Touchpad">
       <naturalScroll>yes</naturalScroll>
