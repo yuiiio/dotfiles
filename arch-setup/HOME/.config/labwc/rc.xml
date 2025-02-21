@@ -19,6 +19,14 @@
     <font name="sans" size="10" />
   </theme>
 
+  <placement>
+    <policy>cascade</policy>
+  </placement>
+
+
+  <windowSwitcher show="yes" preview="no" outlines="yes" allWorkspaces="no">
+  </windowSwitcher>
+
   <regions>
     <region name="bottom"       x="0%"  y="50%" height="50%"  width="100%" />
     <region name="bottom-left"  x="0%"  y="50%" height="50%"  width="50%"  />
@@ -111,7 +119,7 @@
       </mousebind>
     </context>
   </mouse>
-  
+
   <libinput>
     <device category="DELL0A77:00 27C6:0D41 Touchpad">
       <naturalScroll>yes</naturalScroll>
