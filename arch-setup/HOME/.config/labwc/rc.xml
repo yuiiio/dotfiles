@@ -23,6 +23,10 @@
     <policy>cascade</policy>
   </placement>
 
+
+  <windowSwitcher show="yes" preview="no" outlines="yes" allWorkspaces="no">
+  </windowSwitcher>
+
   <regions>
     <region name="bottom"       x="0%"  y="50%" height="50%"  width="100%" />
     <region name="bottom-left"  x="0%"  y="50%" height="50%"  width="50%"  />
