@@ -74,4 +74,3 @@ PreloadInputMethod=True
 [Behavior/DisabledAddons]
 #0=xcb
 #1=xim
-
