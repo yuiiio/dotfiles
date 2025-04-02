@@ -34,27 +34,27 @@ return require("packer").startup(function(use)
     "nvim-lualine/lualine.nvim",
     config = function()
       local colors_dark = {
-        blue = "#839bd3",
-        cyan = "#739389",
-        black = "#080616",
-        white = "#dbd7bc",
-        red = "#b44947",
-        violet = "#917fb4",
-        grey = "#717169",
+        blue = "#5fafd7",
+        cyan = "#d7875f",
+        black = "#1c1c1c",
+        white = "#d0d0d0",
+        red = "#af005f",
+        violet = "#af87d7",
+        grey = "#bcbcbc",
       }
       local colors_light = {
-        blue = "#839bd3",
-        cyan = "#597b75",
-        black = "#1f1f28",
-        white = "#f2ecbc",
-        red = "#c84053",
-        violet = "#b35b79",
-        grey = "#8a8980",
+        blue = "#0087af",
+        cyan = "#005f87",
+        black = "#eeeeee",
+        white = "#764e37",
+        red = "#af0000",
+        violet = "#8700af",
+        grey = "#bcbcbc",
       }
 
-      local colors = colors_dark
+      local colors = colors_light
 
-      local kanagawa_theme = {
+      local opt_theme = {
         normal = {
           a = { fg = colors.black, bg = colors.violet },
           b = { fg = colors.white, bg = colors.grey },
@@ -74,7 +74,7 @@ return require("packer").startup(function(use)
 
       require("lualine").setup({
         options = {
-          theme = kanagawa_theme,
+          theme = opt_theme,
           component_separators = "",
           section_separators = { left = "", right = "" },
         },
