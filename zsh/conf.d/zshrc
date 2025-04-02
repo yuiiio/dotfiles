@@ -169,6 +169,6 @@ alias gc="git cherry-pick"
 alias vi="nvim"
 alias vim="nvim"
 alias ssh="TERM=xterm ssh"
-alias get_idf='. $HOME/esp/esp-idf/export.sh'
+alias amdgpu_top="amdgpu_top --dark-mode"
 
 alias mvi='mpv --config-dir=$HOME/.config/mvi'
