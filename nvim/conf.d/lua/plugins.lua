@@ -127,17 +127,25 @@ return require("packer").startup(function(use)
   })
 
   use({
-    "rebelot/kanagawa.nvim",
-    config = function()
-      vim.cmd("colorscheme kanagawa")
-      require("kanagawa").setup({
-        backgronnd = {
-          dark = "wave",
-          light = "lotus",
-        },
-      })
-    end,
+      "NLKNguyen/papercolor-theme",
+      config = function()
+          vim.cmd("colorscheme PaperColor")
+          vim.cmd("set background=light")
+      end,
   })
+
+  --use({
+  --  "rebelot/kanagawa.nvim",
+  --  config = function()
+  --    vim.cmd("colorscheme kanagawa")
+  --    require("kanagawa").setup({
+  --      backgronnd = {
+  --        dark = "wave",
+  --        light = "lotus",
+  --      },
+  --    })
+  --  end,
+  --})
 
   use({
     "nvim-telescope/telescope.nvim",
