@@ -4,7 +4,7 @@ export LINKER=lld
 export AR=/usr/bin/llvm-ar
 export RANLIB=/usr/bin/llvm-ranlib
 
-export CFLAGS="-march=znver2 -mtune=native -O2 -pipe -fPIC"
+export CFLAGS="-O2 -pipe -fPIC"
 export CFLAGS="${CFLAGS} -fuse-ld=${LINKER}"
 
 CXXFLAGS="${CFLAGS}"
