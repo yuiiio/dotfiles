@@ -1,0 +1,82 @@
+[shortcuts]
+alt-Return = { type = "exec", exec = "foot" }
+alt-space = { type = "exec", exec = "toggle_bemenu.sh"}
+
+# alt-q = "quit"
+# The reload-config-toml action reloads the TOML configuration file.
+alt-shift-r = "reload-config-toml"
+
+# The focus-X actions move the keyboard focus to next window on the X.
+alt-h = "focus-left"
+alt-j = "focus-down"
+alt-k = "focus-up"
+alt-l = "focus-right"
+
+# The move-X actions move window that has the keyboard focus to the X.
+alt-shift-h = "move-left"
+alt-shift-j = "move-down"
+alt-shift-k = "move-up"
+alt-shift-l = "move-right"
+
+# The split-X action places the currently focused window in a container
+# and sets the split direction of the container to X.
+alt-d = "split-horizontal"
+alt-v = "split-vertical"
+
+# The focus-parent action moves the keyboard focus to the parrent of
+# the currently focused window.
+alt-f = "focus-parent"
+# The close action requests the currently focused window to close.
+alt-shift-c = "close"
+# The toggle-floating action changes the currently focused window between
+# floating and tiled.
+alt-shift-f = "toggle-floating"
+
+
+# The switch-to-vt action switches to a different virtual terminal.
+ctrl-alt-F1 = { type = "switch-to-vt", num = 1 }
+ctrl-alt-F2 = { type = "switch-to-vt", num = 2 }
+ctrl-alt-F3 = { type = "switch-to-vt", num = 3 }
+ctrl-alt-F4 = { type = "switch-to-vt", num = 4 }
+ctrl-alt-F5 = { type = "switch-to-vt", num = 5 }
+ctrl-alt-F6 = { type = "switch-to-vt", num = 6 }
+ctrl-alt-F7 = { type = "switch-to-vt", num = 7 }
+ctrl-alt-F8 = { type = "switch-to-vt", num = 8 }
+ctrl-alt-F9 = { type = "switch-to-vt", num = 9 }
+ctrl-alt-F10 = { type = "switch-to-vt", num = 10 }
+ctrl-alt-F11 = { type = "switch-to-vt", num = 11 }
+ctrl-alt-F12 = { type = "switch-to-vt", num = 12 }
+
+# The show-workspace action switches to a workspace. If the workspace is not
+# currently being used, it is created on the output that contains the pointer.
+alt-F1 = { type = "show-workspace", name = "1" }
+alt-F2 = { type = "show-workspace", name = "2" }
+alt-F3 = { type = "show-workspace", name = "3" }
+alt-F4 = { type = "show-workspace", name = "4" }
+alt-F5 = { type = "show-workspace", name = "5" }
+alt-F6 = { type = "show-workspace", name = "6" }
+alt-F7 = { type = "show-workspace", name = "7" }
+alt-F8 = { type = "show-workspace", name = "8" }
+alt-F9 = { type = "show-workspace", name = "9" }
+alt-F10 = { type = "show-workspace", name = "10" }
+alt-F11 = { type = "show-workspace", name = "11" }
+alt-F12 = { type = "show-workspace", name = "12" }
+
+# The move-to-workspace action moves the currently focused window to a workspace.
+alt-shift-F1 = { type = "move-to-workspace", name = "1" }
+alt-shift-F2 = { type = "move-to-workspace", name = "2" }
+alt-shift-F3 = { type = "move-to-workspace", name = "3" }
+alt-shift-F4 = { type = "move-to-workspace", name = "4" }
+alt-shift-F5 = { type = "move-to-workspace", name = "5" }
+alt-shift-F6 = { type = "move-to-workspace", name = "6" }
+alt-shift-F7 = { type = "move-to-workspace", name = "7" }
+alt-shift-F8 = { type = "move-to-workspace", name = "8" }
+alt-shift-F9 = { type = "move-to-workspace", name = "9" }
+alt-shift-F10 = { type = "move-to-workspace", name = "10" }
+alt-shift-F11 = { type = "move-to-workspace", name = "11" }
+alt-shift-F12 = { type = "move-to-workspace", name = "12" }
+
+#on-graphics-initialized = [
+#    { type = "exec", exec = ["jay", "randr", "mode", "2560", "1080", "99.943"] },
+#    { type = "exec", exec = ["jay", "randr", "vrr", "always"] },
+#]
