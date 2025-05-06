@@ -76,6 +76,10 @@ logo-shift-10 = { type = "move-to-workspace", name = "10" }
 logo-shift-11 = { type = "move-to-workspace", name = "11" }
 logo-shift-12 = { type = "move-to-workspace", name = "12" }
 
+XF86AudioLowerVolume = { type = "exec", exec = [ "amixer", "sset", "Master", "5%-" ] }
+XF86AudioRaiseVolume = { type = "exec", exec = [ "amixer", "sset", "Master", "5%+" ] }
+XF86AudioMute        = { type = "exec", exec = [ "amixer", "sset", "Master", "toggle" ] }
+
 #on-graphics-initialized = [
 #    { type = "exec", exec = ["jay", "randr", "mode", "2560", "1080", "99.943"] },
 #    { type = "exec", exec = ["jay", "randr", "vrr", "always"] },
