@@ -1,4 +1,7 @@
 export MESA_SHADER_CACHE_DIR="$HOME/.cache/mesa_shader_cache_db"
+
+export VK_LAYER_MESA_OVERLAY_CONFIG="position=bottom-left"
+
 export PATH="$HOME/.local/bin:$PATH"
 #export PATH="$PATH:$HOME/go/bin"
 
@@ -71,7 +74,7 @@ export LABWC_ADAPTIVE_SYNC="1"
 # for ccache
 export PATH="/usr/lib/ccache/bin/:$PATH"
 # for mingw & ccache
-# export MINGW_GCC_VERSION=`x86_64-w64-mingw32-gcc --version | grep gcc | awk '{print $3}'` 
+# export MINGW_GCC_VERSION=`x86_64-w64-mingw32-gcc --version | grep gcc | awk '{print $3}'`
 
 # ln -sf /usr/bin/ccache  /usr/lib/ccache/bin/x86_64-w64-mingw32-c++
 # ln -sf /usr/bin/ccache  /usr/lib/ccache/bin/x86_64-w64-mingw32-cc
@@ -89,7 +92,7 @@ export PATH="/usr/lib/ccache/bin/:$PATH"
 #
 
 # my desktop setup is 7950x + 6900xt
-# 7950x igpu is /dev/dri/by-path/pci-0000:0e:00.0-card 
+# 7950x igpu is /dev/dri/by-path/pci-0000:0e:00.0-card
 # 6900xt is /dev/dri/by-path/pci-0000:03:00.0-card
 
 export SSH_OPENOCD="pi4"
