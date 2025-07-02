@@ -1,0 +1,33 @@
+scanner {
+    file("/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq", NoGlob) {
+        MaxClockCpu0 = RegEx("([0-9]+)")
+    }
+
+}
+
+Function CpuSet1 () {
+    Exec("/home/haibane/.local/bin/toggle-cpu-max-clock.sh 1")
+    uSleep(500000) #need block exec ?
+    EmitTrigger("cpu-control")
+}
+
+Function CpuSet2() {
+    Exec("/home/haibane/.local/bin/toggle-cpu-max-clock.sh 2")
+    uSleep(500000)
+    EmitTrigger("cpu-control")
+}
+
+layout {
+    label "CpuControl" {
+        interval = 60000
+        style = cpu_control
+        value = "CPU\n" + Str(MaxClockCpu0/1000)
+        css = "* {
+            -GtkWidget-hexpand: true;
+            -GtkWidget-halign: center;
+            }"
+        action[LeftClick] = CpuSet1
+        action[RightClick] = CpuSet2
+        trigger = "cpu-control"
+    }
+}

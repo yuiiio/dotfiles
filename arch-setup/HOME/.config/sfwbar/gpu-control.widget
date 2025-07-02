@@ -1,0 +1,31 @@
+scanner {
+    file("/sys/class/drm/card0/device/power_dpm_force_performance_level", NoGlob) {
+        ClockModeGpu = RegEx("([a-z]+)")
+    }
+}
+
+Function GpuSet1 () {
+    Exec("/home/haibane/.local/bin/toggle-gpu-clock.sh 1")
+    uSleep(500000)
+    EmitTrigger("gpu-control")
+}
+
+Function GpuSet2 () {
+    Exec("/home/haibane/.local/bin/toggle-gpu-clock.sh 2")
+    uSleep(500000)
+    EmitTrigger("gpu-control")
+}
+
+layout {
+    label "GpuControl" {
+        interval = 60000
+        value = "GPU\n" + Map($ClockModeGpu, "manual", "MNAL", "auto", "AUTO", "low", "LOW", "")
+        css = "* {
+            -GtkWidget-hexpand: true;
+            -GtkWidget-halign: center;
+            }"
+        action[LeftClick] = GpuSet1
+        action[RightClick] = GpuSet2
+        trigger = "gpu-control"
+    }
+}
