@@ -67,8 +67,8 @@ export WGPU_BACKEND="vulkan"
 # export IGPU_CARD=`readlink -f /dev/dri/by-path/pci-0000:00:02.0-card`
 # export WLR_DRM_DEVICES="$IGPU_CARD"
 
-# export WLR_RENDERER="gles2"
-export WLR_RENDERER="vulkan"
+export WLR_RENDERER="gles2"
+# export WLR_RENDERER="vulkan"
 
 export LABWC_ADAPTIVE_SYNC="1"
 
