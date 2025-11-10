@@ -14,6 +14,7 @@
   "svelte.enable-ts-plugin": true,
   "zig.enabled": true,
   "zig.path": "zls",
+  "rust-analyzer.updates.prompt": "neverDownload", 
   "languageserver": {
     "golang": {
       "command": "gopls",
