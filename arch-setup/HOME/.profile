@@ -1,4 +1,8 @@
 export MESA_SHADER_CACHE_DIR="$HOME/.cache/mesa_shader_cache_db"
+export MESA_SHADER_CACHE_MAX_SIZE="10G"
+
+export VK_LAYER_MESA_OVERLAY_CONFIG="position=bottom-left"
+
 export PATH="$HOME/.local/bin:$PATH"
 #export PATH="$PATH:$HOME/go/bin"
 
