@@ -72,6 +72,8 @@ if vim.fn.has("termguicolors") == 1 then
 end
 vim.env.NVIM_TUI_ENABLE_TRUE_COLOR = 1
 
+vim.opt.title = true
+
 -- FILETYPES
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   pattern = "*.jsonnet",

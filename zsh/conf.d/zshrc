@@ -2,6 +2,11 @@ bindkey -v
 #bindkey "jj" vi-cmd-mode
 stty stop undef
 
+function set_win_title(){
+    echo -ne "\\033]0;$PWD \\007"
+}
+precmd_functions+=(set_win_title)
+
 ### zsh history
 export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=1000
