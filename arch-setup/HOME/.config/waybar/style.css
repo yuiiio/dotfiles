@@ -54,7 +54,6 @@ button {
 
 #taskbar button.active {
   background-color: #bcbcbc;
-  border: none;
 }
 
 #clock {
