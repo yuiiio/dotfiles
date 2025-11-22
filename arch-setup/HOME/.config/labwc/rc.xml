@@ -28,7 +28,7 @@
   </windowSwitcher>
 
   <desktops>
-      <popupTime>1000</popupTime>
+      <popupTime>500</popupTime>
       <names>
           <name>Workspace 1</name>
           <name>Workspace 2</name>
@@ -117,6 +117,18 @@
     <keybind key="W-4">
       <action name="GoToDesktop" to="Workspace 4" />
     </keybind>
+    <keybind key="W-S-1">
+      <action name="SendToDesktop" to="Workspace 1" follow="false" />
+    </keybind>
+    <keybind key="W-S-2">
+      <action name="SendToDesktop" to="Workspace 2" follow="false" />
+    </keybind>
+    <keybind key="W-S-3">
+      <action name="SendToDesktop" to="Workspace 3" follow="false" />
+    </keybind>
+    <keybind key="W-S-4">
+      <action name="SendToDesktop" to="Workspace 4" follow="false" />
+    </keybind>
     <!--
       Remove a previously defined keybind
       A shorter alternative is <keybind key="W-F4" />
@@ -139,6 +151,12 @@
       <mousebind button="Middle" action="Press">
         <action name="None" />
       </mousebind>
+      <mousebind direction="Up" action="Scroll">
+        <action name="None" />
+        </mousebind>
+      <mousebind direction="Down" action="Scroll">
+        <action name="None" />
+        </mousebind>
     </context>
 
     <context name="TitleBar">
