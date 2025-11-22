@@ -1,13 +1,57 @@
-#sidebar-header {
-  display: none;
+
+/* Bar resizing */
+:root {
+  --tab-max-height: 26px !important;
 }
 
-#sidebar-box,
-#sidebar {
-  max-width: none !important;
-  min-width: 0px !important;
+#nav-bar,
+.toolbar-items,
+.titlebar-buttonbox-container,
+.tab-content,
+.tab-background,
+.tab-label-container {
+  height: var(--tab-max-height);
+}
+.tab-background {
+  margin: 0 !important;
 }
 
-#TabsToolbar {
-  visibility: collapse !important;
+/* Rouding None */
+:root {
+  --toolbarbutton-border-radius: 0 !important;
+  --tab-border-radius: 0 !important;
+  /* --tab-block-margin: 0 !important; */
+}
+
+/* Shadow disable */
+#urlbar-background {
+    box-shadow: none !important;
+}
+
+#urlbar {
+    box-shadow: none !important;
+}
+
+
+/* Vertical Tab shrink */
+#tabbrowser-arrowscrollbox[orient="vertical"] {
+    --tab-min-height: 24px; /* Adjust minimum tab height */
+    --tab-block-margin: 0; /* Remove vertical margin between tabs */
+}
+
+.tabbrowser-tab {
+    padding-block: 0; /* Remove vertical padding within tabs */
+}
+
+.tab-text.tab-label {
+    font-size: 14px; /* Adjust font size for tab labels */
+}
+
+/* Optional: Further compact tab groups if used */
+tab-group {
+    margin: 2px 0;
+}
+
+.tab-group-label-container {
+    margin-block: 0 4px;
 }
