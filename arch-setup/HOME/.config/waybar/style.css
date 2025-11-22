@@ -7,18 +7,8 @@
 
 window#waybar {
   /* background: none; */
-  background-color: #2e3440; 
-  color: #4c566a;
-}
-
-#workspaces,
-#window {
-  margin: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  background-color: #4c566a;
-  font-size:14px;
-  font-weight: bold;
+  background-color: #1c1c1c; 
+  color: #eeeeee;
 }
 
 button {
@@ -29,35 +19,25 @@ button {
   border-radius: 0;
 }
 
-#mode {
-  background-color: #64727D;
-  border-bottom: 3px solid #ffffff;
-}
-
 #clock,
 #upower,
-#cpu,
-#memory,
-#disk,
-#temperature,
 #backlight,
-#network,
-#pulseaudio,
 #wireplumber,
-#mode,
 #idle_inhibitor {
   margin: 1px;
   padding-left: 0px;
   padding-right: 0px;
-  background-color: #4c566a;
-  color: #ffffff;
+  background-color: #1c1c1c;
+  color: #eeeeee;
 }
 
 #wireplumber {
-    color: #ebcb8b;
+    background-color: #d7af5f;
+    color: #1c1c1c;
 }
 #wireplumber.muted {
-    color: #d08770;
+    background-color: #d7875f;
+    color: #1c1c1c;
 }
 
 #tray {
@@ -69,12 +49,12 @@ button {
 }
 
 #taskbar button {
-  border: 1px solid #4c566a;
+  border: 1px solid #878787;
 }
 
 #taskbar button.active {
-  background-color: #4c566a;
-  border: 1px solid #81a1c1;
+  background-color: #bcbcbc;
+  border: 1px solid #005f87;
 }
 
 #clock {
@@ -94,29 +74,25 @@ label:focus {
   background-color: #000000;
 }
 
-#network.disconnected {
-  background-color: #f53c3c;
-}
-
 #workspaces {
   background-color: #bcbcbc;
-  color: #2d3436;
+  color: #1c1c1c;
 }
 
 #workspaces button {
   background-color: #bcbcbc;
   border: 1px solid #4c566a;
-  color: #2d3436;
+  color: #1c1c1c;
 }
 
 #workspaces button.active {
   background-color: #af87d7;
-  color: #2d3436;
+  color: #1c1c1c;
 }
 
 #idle_inhibitor.activated {
-  background-color: #ecf0f1;
-  color: #2d3436;
+  background-color: #eeeeee;
+  color: #1c1c1c;
 }
 
 #tray > .passive {
