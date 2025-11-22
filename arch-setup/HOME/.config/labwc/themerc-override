@@ -1,14 +1,14 @@
 # window border
-window.active.border.color: #444444
-window.inactive.border.color: #bcbcbc
+window.active.border.color: #bcbcbc
+window.inactive.border.color: #eeeeee
 
 # window titlebar background
-window.active.title.bg.color: #eeeeee
-window.inactive.title.bg.color: #bcbcbc
+window.active.title.bg.color: #bcbcbc
+window.inactive.title.bg.color: #eeeeee
 
 # window titlebar text
 window.active.label.text.color: #1c1c1c
-window.inactive.label.text.color: #444444
+window.inactive.label.text.color: #bcbcbc
 window.label.text.justify: center
 
 # window buttons
