@@ -7,13 +7,26 @@
     // Choose the order of the modules
     "modules-left": [ "wlr/taskbar" ],
     "modules-center": [],
-    "modules-right": [ "idle_inhibitor", "custom/cpuclock", "custom/gpuclock", "wireplumber", "upower", "tray", "clock"],
+    "modules-right": ["ext/workspaces",  "idle_inhibitor", "custom/cpuclock", "custom/gpuclock", "wireplumber", "upower", "tray", "clock"],
     "wlr/taskbar": {
         "tooltip": false,
         "icon-theme": "Adwaita",
         "format": "{icon}",
         "icon-size": 20,
         "on-click": "activate"
+    },
+    "ext/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "icon-size": 20,
+        "format-icons": {
+            "Workspace 1": "1",
+            "Workspace 2": "2",
+            "Workspace 3": "3",
+            "Workspace 4": "4",
+            "default": ""
+        },
+        "sort-by-id": false
     },
     "idle_inhibitor": {
         "tooltip": false,
