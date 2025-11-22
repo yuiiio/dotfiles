@@ -32,6 +32,15 @@
     box-shadow: none !important;
 }
 
+.browser-toolbar:not(.titlebar-color){
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+#nav-bar:not([tabs-hidden='true']) {
+  box-shadow: none;
+}
+
 
 /* Vertical Tab shrink */
 #tabbrowser-arrowscrollbox[orient="vertical"] {
