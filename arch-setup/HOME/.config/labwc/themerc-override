@@ -13,7 +13,7 @@ window.label.text.justify: center
 
 # window buttons
 window.active.button.unpressed.image.color: #1c1c1c
-window.inactive.button.unpressed.image.color: #444444
+window.inactive.button.unpressed.image.color: #bcbcbc
 
 snapping.overlay.region.bg.enabled: no
 snapping.overlay.edge.bg.enabled: no

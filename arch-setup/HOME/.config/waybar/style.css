@@ -54,7 +54,7 @@ button {
 
 #taskbar button.active {
   background-color: #bcbcbc;
-  border: 1px solid #005f87;
+  border: none;
 }
 
 #clock {
@@ -83,6 +83,8 @@ label:focus {
   background-color: #bcbcbc;
   border: 1px solid #4c566a;
   color: #1c1c1c;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 #workspaces button.active {
