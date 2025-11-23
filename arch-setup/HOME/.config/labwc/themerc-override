@@ -1,9 +1,9 @@
 # window border
-window.active.border.color: #bcbcbc
+window.active.border.color: #d0d0d0
 window.inactive.border.color: #eeeeee
 
 # window titlebar background
-window.active.title.bg.color: #bcbcbc
+window.active.title.bg.color: #d0d0d0
 window.inactive.title.bg.color: #eeeeee
 
 # window titlebar text
