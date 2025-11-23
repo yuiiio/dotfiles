@@ -11,6 +11,8 @@ return {
                         local icon = level:match("error") and " " or ""
                         return " " .. icon
                     end,
+                    close_icon = "🗙",
+                    buffer_close_icon = "🗙",
                 },
             })
             vim.api.nvim_set_keymap("n", "<Tab>", ":BufferLineCycleNext<CR>", { noremap = true })
