@@ -1,0 +1,6 @@
+#!/bin/bash -ex
+
+exec meson setup \
+  --buildtype     debug \
+  -D              b_sanitize=address,undefined \
+  "$@"
