@@ -11,8 +11,6 @@ export DXVK_HUD="devinfo,fps,frametimes,gpuload,version,api"
 export DXVK_CONFIG_FILE="$HOME/.config/dxvk.conf"
 export DXVK_LOG_LEVEL="none"
 
-export VKD3D_CONFIG="dxr"
-
 export radv_disable_ngg_gs="true"
 export RADV_PERFTEST="nogttspill"
 
@@ -70,8 +68,6 @@ export WGPU_BACKEND="vulkan"
 
 export WLR_RENDERER="gles2"
 # export WLR_RENDERER="vulkan"
-
-export LABWC_ADAPTIVE_SYNC="1"
 
 # for ccache
 export PATH="/usr/lib/ccache/bin/:$PATH"
