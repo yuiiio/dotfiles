@@ -1,6 +1,6 @@
 [shortcuts]
 logo-Return = { type = "exec", exec = "foot" }
-alt-space = { type = "exec", exec = "toggle_bemenu.sh"}
+alt-space = { type = "exec", exec = "toggle_wmenu.sh"}
 
 # alt-q = "quit"
 # The reload-config-toml action reloads the TOML configuration file.
