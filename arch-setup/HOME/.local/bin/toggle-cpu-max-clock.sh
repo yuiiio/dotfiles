@@ -14,15 +14,17 @@ if [ -e $FILE ]; then
         elif [ $VAR = "2" ]; then
             sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq <<< 4400000
             echo "3" > $FILE
-        elif [ $VAR = "3" ]; then # cycle
-            sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq <<< 800000
-            echo "1" > $FILE
         fi
+        # elif [ $VAR = "3" ]; then # cycle
+        #     sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq <<< 800000
+        #     echo "1" > $FILE
+        # fi
     elif [ $CYCLE_DIR = "2" ]; then # reverse
-        if [ $VAR = "1" ]; then # cycle
-            sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq <<< 4400000
-            echo "3" > $FILE
-        elif [ $VAR = "2" ]; then
+        # if [ $VAR = "1" ]; then # cycle
+        #     sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq <<< 4400000
+        #     echo "3" > $FILE
+        # elif
+        if [ $VAR = "2" ]; then
             sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_max_freq <<< 800000
             echo "1" > $FILE
         elif [ $VAR = "3" ]; then
