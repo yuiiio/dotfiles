@@ -70,7 +70,8 @@
     },
     "custom/cpuclock": { //toggle cpu max freq, 4.4GHz and 1.8GHz
         "tooltip": false,
-        "format": "MX\n{}",
+        "format": "🔳\n{}",
+        "justify": "center",
         "interval": "once",
         "exec": "$HOME/.local/bin/show-current-cpu-max-clock.sh",
         "exec-if": "exit 0",
@@ -81,7 +82,8 @@
     },
     "custom/gpuclock": { //toggle gpu clock, auto, manual(1200)
         "tooltip": false,
-        "format": "🕹 CL\n{}",
+        "format": "🎮\n{}",
+        "justify": "center",
         "interval": "once",
         "exec": "$HOME/.local/bin/show-current-gpu-clock.sh",
         "exec-if": "exit 0",
