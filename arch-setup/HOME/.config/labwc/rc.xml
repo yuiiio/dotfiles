@@ -185,10 +185,10 @@
   </libinput>
   
   <touchpad_gesture deviceName="DELL0A77:00 27C6:0D41 Touchpad">
-      <gesturebind gesture="swipe-left" finger_count="3">
+      <gesturebind gesture="swipe-left" finger_count="4">
           <action name="GoToDesktop" to="right" wrap="yes" />
       </gesturebind>
-      <gesturebind gesture="swipe-right" finger_count="3">
+      <gesturebind gesture="swipe-right" finger_count="4">
           <action name="GoToDesktop" to="left" wrap="yes" />
       </gesturebind>
   </touchpad_gesture>
