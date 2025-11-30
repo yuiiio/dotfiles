@@ -72,21 +72,23 @@
         "tooltip": false,
         "format": "MX\n{}",
         "interval": "once",
-        "exec": "sleep 0.5; $HOME/.local/bin/show-current-cpu-max-clock.sh",
+        "exec": "$HOME/.local/bin/show-current-cpu-max-clock.sh",
         "exec-if": "exit 0",
-        "exec-on-event": true,
-        "on-click": "$HOME/.local/bin/toggle-cpu-max-clock.sh 1",
-        "on-click-right": "$HOME/.local/bin/toggle-cpu-max-clock.sh 2",
+        "exec-on-event": false,
+        "on-click": "$HOME/.local/bin/toggle-cpu-max-clock.sh 1; pkill -SIGRTMIN+9 waybar",
+        "on-click-right": "$HOME/.local/bin/toggle-cpu-max-clock.sh 2; pkill -SIGRTMIN+9 waybar",
+        "signal": 9,
     },
     "custom/gpuclock": { //toggle gpu clock, auto, manual(1200)
         "tooltip": false,
         "format": "🕹 CL\n{}",
         "interval": "once",
-        "exec": "sleep 0.5; $HOME/.local/bin/show-current-gpu-clock.sh", //sleep needs for wait toggle-gpu-clock.sh 
+        "exec": "$HOME/.local/bin/show-current-gpu-clock.sh",
         "exec-if": "exit 0",
-        "exec-on-event": true,
-        "on-click": "$HOME/.local/bin/toggle-gpu-clock.sh 1",
-        "on-click-right": "$HOME/.local/bin/toggle-gpu-clock.sh 2",
+        "exec-on-event": false,
+        "on-click": "$HOME/.local/bin/toggle-gpu-clock.sh 1; pkill -SIGRTMIN+8 waybar",
+        "on-click-right": "$HOME/.local/bin/toggle-gpu-clock.sh 2; pkill -SIGRTMIN+8 waybar",
+        "signal": 8,
     }
 }
 
