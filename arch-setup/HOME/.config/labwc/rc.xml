@@ -140,6 +140,14 @@
 
   <mouse>
     <default />
+    <context name="All">
+        <mousebind direction="Left" fingers="4" action="swipe">
+            <action name="GoToDesktop" to="right" wrap="false" />
+        </mousebind>
+        <mousebind direction="Right" fingers="4" action="swipe">
+            <action name="GoToDesktop" to="left" wrap="false" />
+        </mousebind>
+    </context>
     <!-- Show a custom menu on desktop right click -->
     <context name="Root">
       <mousebind button="Left" action="Press">
@@ -183,13 +191,5 @@
       <disableWhileTyping></disableWhileTyping>
     </device>
   </libinput>
-  
-  <touchpad_gesture deviceName="DELL0A77:00 27C6:0D41 Touchpad">
-      <gesturebind gesture="swipe-left" finger_count="4">
-          <action name="GoToDesktop" to="right" wrap="yes" />
-      </gesturebind>
-      <gesturebind gesture="swipe-right" finger_count="4">
-          <action name="GoToDesktop" to="left" wrap="yes" />
-      </gesturebind>
-  </touchpad_gesture>
+
 </labwc_config>
