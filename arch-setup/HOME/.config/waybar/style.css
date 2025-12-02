@@ -23,12 +23,19 @@ button {
 #upower,
 #backlight,
 #wireplumber,
+#custom-cpuclock,
 #idle_inhibitor {
   margin: 1px;
   padding-left: 0px;
   padding-right: 0px;
   background-color: #1c1c1c;
   color: #eeeeee;
+}
+
+#custom-cpuclock {
+  font-size:15px;
+  background-color: #eeeeee;
+  color: #1c1c1c;
 }
 
 #wireplumber {

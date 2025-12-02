@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": [ "wlr/taskbar" ],
     "modules-center": [],
-    "modules-right": ["ext/workspaces", "idle_inhibitor", "wireplumber", "upower", "tray", "clock"],
+    "modules-right": ["ext/workspaces", "idle_inhibitor", "custom/cpuclock", "wireplumber", "upower", "tray", "clock"],
     "wlr/taskbar": {
         "tooltip": false,
         "icon-theme": "Adwaita",
@@ -65,5 +65,17 @@
         "format": "<span font=\"8\">AUDIO</span>\n{volume}%",
         "format-muted": "<span font=\"8\">AUDIO</span>\n ",
         "on-click": "pavucontrol"
+    },
+    "custom/cpuclock": { //toggle cpu max freq, 4.4GHz and 1.8GHz
+        "tooltip": false,
+        "format": "🔳\n{}",
+        "justify": "center",
+        "interval": "once",
+        "exec": "$HOME/.local/bin/show-current-cpu-max-clock.sh",
+        "exec-if": "exit 0",
+        "exec-on-event": false,
+        "on-click": "$HOME/.local/bin/toggle-cpu-max-clock.sh 1; pkill -SIGRTMIN+9 waybar",
+        "on-click-right": "$HOME/.local/bin/toggle-cpu-max-clock.sh 2; pkill -SIGRTMIN+9 waybar",
+        "signal": 9,
     },
 }
