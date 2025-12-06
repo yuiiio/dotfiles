@@ -1,8 +1,7 @@
 wlr-randr --output DP-2 --mode 2560x1080@99.943001Hz
 
-swaybg -i /home/haibane/wallpapers/norm-wallpaper.png >/dev/null 2>&1 &
-# swaybg -i /usr/share/wallpapers/Next/contents/images/1920x1080.png >/dev/null 2>&1 &
-#yambar >/dev/null 2>&1 &
+swaybg -i ~/Downloads/Houseki-dia-1080.png -m fill -c 000000 >/dev/null 2>&1 &
+
 waybar >/dev/null 2>&1 &
 fcitx5 >/dev/null 2>&1 &
 
