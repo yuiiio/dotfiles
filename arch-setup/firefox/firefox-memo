@@ -6,6 +6,7 @@ browser.cache.disk.parent_directory	/run/user/1000/firefox
 browser.contentblocking.category	standard
 browser.search.region	JP
 browser.search.suggest.enabled	false
+browser.sessionstore.interval 3600000
 browser.sessionstore.resume_from_crash	false
 browser.sessionstore.upgradeBackup.latestBuildID	20230115094128
 browser.startup.homepage_override.buildID	20230115094128
