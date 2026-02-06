@@ -15,6 +15,7 @@ cmake ../rpcs3 \
     -DUSE_SYSTEM_SDL=ON \
     -DUSE_SYSTEM_FFMPEG=ON \
     -DUSE_FAUDIO=ON \
+    -DHAVE_OPENCV=OFF \
     -DCMAKE_C_FLAGS="${CFLAGS}" \
     -DCMAKE_CXX_FLAGS="${CFLAGS}" \
     -DCMAKE_AR="${AR}" \
