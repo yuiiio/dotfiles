@@ -1,6 +1,6 @@
 wlr-randr --output DP-2 --mode 2560x1080@99.943001Hz
 
-swaybg -i ~/Downloads/wp7296876-saber-fatestay-night-wallpapers.jpg -m fill -c 000000 >/dev/null 2>&1 &
+swaybg -i ~/Downloads/Houseki-pet.jpg -m fill -c 000000 >/dev/null 2>&1 &
 
 waybar >/dev/null 2>&1 &
 fcitx5 >/dev/null 2>&1 &
