@@ -8,7 +8,7 @@
   <theme>
     <cornerRadius>0</cornerRadius>
     <keepBorder>no</keepBorder>
-    <font name="sans" size="10" />
+    <font name="sans" size="11" />
   </theme>
 
   <placement>
@@ -178,7 +178,9 @@
   </libinput>
 
   <windowRules>
-      <windowRule identifier="foot" serverDecoration="no"/>
+      <windowRule identifier="foot" serverDecoration="yes">
+        <action name="SetDecorations" decorations="border" forceSSD="no" />
+      </windowRule>
   </windowRules>
 
 </labwc_config>
