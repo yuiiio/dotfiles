@@ -1,0 +1,19 @@
+[user]
+	email = atbjyk@protonmail.com
+	name = yuiiio
+[merge]
+	tool = vimdiff
+[mergetool "vimdiff"]
+	path = nvim
+[core]
+	editor = nvim
+[url "https://invent.kde.org/"]
+	insteadOf = kde:
+[url "ssh://git@invent.kde.org/"]
+	pushInsteadOf = kde:
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[credential]
+	helper = cache
