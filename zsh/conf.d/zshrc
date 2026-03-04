@@ -177,3 +177,12 @@ alias ssh="TERM=xterm ssh"
 alias amdgpu_top="amdgpu_top --dark-mode"
 
 alias mvi='mpv --config-dir=$HOME/.config/mvi'
+
+function cdghq() {
+    moveto=$(ghq root)/$(ghq list | fzf)
+
+    if [[ "${moveto}" != "$(ghq root)/" ]]
+    then
+       cd $moveto
+    fi
+}
