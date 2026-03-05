@@ -10,3 +10,7 @@ fi
 
 SOURCE_SCRIPT="source `pwd`/zsh/conf.d/zshrc"
 ! grep "${SOURCE_SCRIPT}" ~/.zshrc && echo "${SOURCE_SCRIPT}" >> ~/.zshrc
+
+## for mise
+#echo 'eval "$(~/.local/bin/mise activate zsh)"' >> ~/.zshrc
+# altenative use .profile path
