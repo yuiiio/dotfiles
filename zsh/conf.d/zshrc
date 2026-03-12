@@ -171,8 +171,6 @@ alias dmesg="sudo dmesg"
 alias intel_gpu_top="sudo intel_gpu_top"
 alias igt="sudo intel_gpu_top"
 alias gc="git cherry-pick"
-alias vi="nvim"
-alias vim="nvim"
 alias ssh="TERM=xterm ssh"
 alias amdgpu_top="amdgpu_top --dark-mode"
 
