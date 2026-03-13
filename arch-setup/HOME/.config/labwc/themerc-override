@@ -1,8 +1,6 @@
 # window border
-window.active.border.color: #9e9e9e
-window.inactive.border.color: #444444
-
-border.width: 1
+window.active.border.color: #878787
+window.inactive.border.color: #d0d0d0
 
 # window titlebar background
 window.active.title.bg.color: #d0d0d0
@@ -21,6 +19,3 @@ snapping.overlay.region.bg.enabled: no
 snapping.overlay.edge.bg.enabled: no
 snapping.overlay.region.border.enabled: yes
 snapping.overlay.edge.border.enabled: yes
-
-osd.window-switcher.preview.border.width: 2
-osd.window-switcher.preview.border.color: #dddda6,#000000,#dddda6
