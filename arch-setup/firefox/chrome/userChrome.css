@@ -1,3 +1,10 @@
+/* Disable Rounded Corners for Tabs and UI */
+:root {
+  --border-radius-medium: 0px !important;
+  --border-radius-small: 0px !important;
+  --tab-border-radius: 0px !important;
+}
+
 
 /* Bar resizing */
 :root {
