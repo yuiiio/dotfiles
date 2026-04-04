@@ -1,0 +1,2 @@
+# Logitech Receiver のスリープ復帰を無効化
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="046d", ATTR{idProduct}=="c548", ATTR{power/wakeup}="disabled"
