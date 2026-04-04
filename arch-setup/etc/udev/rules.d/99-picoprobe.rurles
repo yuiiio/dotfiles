@@ -1,0 +1,2 @@
+# Picoprobe settins
+ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="000c", MODE="0666"
