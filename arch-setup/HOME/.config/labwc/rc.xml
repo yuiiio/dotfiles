@@ -16,7 +16,7 @@
   </placement>
 
 
-  <windowSwitcher preview="no" outlines="yes" allWorkspaces="no">
+  <windowSwitcher style="classic" preview="no" outlines="yes" allWorkspaces="no" order="focus">
       <osd show="yes" />
   </windowSwitcher>
 
