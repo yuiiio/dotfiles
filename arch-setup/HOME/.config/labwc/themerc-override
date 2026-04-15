@@ -19,3 +19,5 @@ snapping.overlay.region.bg.enabled: no
 snapping.overlay.edge.bg.enabled: no
 snapping.overlay.region.border.enabled: yes
 snapping.overlay.edge.border.enabled: yes
+
+overview.bg.color: #26233a

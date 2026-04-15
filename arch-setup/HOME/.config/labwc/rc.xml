@@ -126,6 +126,9 @@
       Remove a previously defined keybind
       A shorter alternative is <keybind key="W-F4" />
     -->
+    <keybind key="W-Tab">
+      <action name="ToggleOverview" />
+    </keybind>
     <keybind key="W-F4">
       <action name="None" />
     </keybind>
