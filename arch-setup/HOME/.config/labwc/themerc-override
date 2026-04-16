@@ -1,23 +1,25 @@
 # window border
-window.active.border.color: #878787
-window.inactive.border.color: #d0d0d0
+window.active.border.color: #e0def4
+window.inactive.border.color: #e0def4
 
 # window titlebar background
-window.active.title.bg.color: #d0d0d0
-window.inactive.title.bg.color: #eeeeee
+window.active.title.bg.color: #eed0ff
+window.inactive.title.bg.color: #e0def4
 
 # window titlebar text
-window.active.label.text.color: #1c1c1c
-window.inactive.label.text.color: #bcbcbc
+window.active.label.text.color: #191724
+window.inactive.label.text.color: #191724
 window.label.text.justify: center
 
 # window buttons
-window.active.button.unpressed.image.color: #1c1c1c
-window.inactive.button.unpressed.image.color: #bcbcbc
+window.active.button.unpressed.image.color: #191724
+window.inactive.button.unpressed.image.color: #47435d
 
-snapping.overlay.region.bg.enabled: no
-snapping.overlay.edge.bg.enabled: no
+snapping.overlay.region.bg.enabled: yes
+snapping.overlay.edge.bg.enabled: yes
 snapping.overlay.region.border.enabled: yes
 snapping.overlay.edge.border.enabled: yes
 
-overview.bg.color: #26233a
+osd.bg.color: #e0def4
+
+overview.bg.color: #26233afa
