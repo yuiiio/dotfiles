@@ -16,8 +16,8 @@
   </placement>
 
 
-  <windowSwitcher style="classic" preview="no" outlines="yes" allWorkspaces="no" order="focus">
-      <osd show="yes" />
+  <windowSwitcher preview="no" outlines="yes" order="focus">
+      <osd show="yes" style="classic"/>
   </windowSwitcher>
 
   <desktops>
@@ -129,6 +129,12 @@
     <keybind key="W-Tab">
       <action name="ToggleOverview" />
     </keybind>
+    <keybind key="A-Tab">
+      <action name="NextWindow" workspace="current" />
+    </keybind>
+    <keybind key="A-S-Tab">
+      <action name="PreviousWindow" workspace="current" />
+    </keybind>
     <keybind key="W-F4">
       <action name="None" />
     </keybind>
@@ -142,6 +148,12 @@
         </mousebind>
         <mousebind direction="Right" fingers="4" action="swipe">
             <action name="GoToDesktop" to="left" wrap="false" />
+        </mousebind>
+        <mousebind direction="Down" fingers="4" action="swipe">
+            <action name="HideOverview" />
+        </mousebind>
+        <mousebind direction="Up" fingers="4" action="swipe">
+            <action name="ShowOverview" />
         </mousebind>
     </context>
     <!-- Show a custom menu on desktop right click -->
