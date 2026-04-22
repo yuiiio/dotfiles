@@ -165,6 +165,9 @@ esac
 
 alias pacman="sudo pacman"
 set -o ignoreeof
+function do_nothing() {}
+zle -N do_nothing
+bindkey "^D" do_nothing
 alias ls="ls --color"
 alias powertop="TERM=xterm sudo powertop"
 alias dmesg="sudo dmesg"
