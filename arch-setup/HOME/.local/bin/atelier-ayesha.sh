@@ -1,3 +1,16 @@
+# fix_video.sh
+#
+##!/usr/bin/env bash
+#
+#for wmv_file in *.wmv
+#do
+#new_filename="$wmv_file".ORIGINAL
+#echo "Renaming $wmv_file to $new_filename"
+#mv "$wmv_file" "$new_filename"
+#
+#ffmpeg -i "$new_filename" -acodec pcm_s16le -vcodec copy "$wmv_file"
+#done
+#
 
 cd $HOME/.proton-unlock/pfx/drive_c/Program\ Files\ \(x86\)/Atelier\ Ayesha\ The\ Alchemist\ of\ Dusk\ DX/
 # VK_INSTANCE_LAYERS=VK_LAYER_MESA_overlay
