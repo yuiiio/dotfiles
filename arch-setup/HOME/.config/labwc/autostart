@@ -1,4 +1,4 @@
-swaybg -i ~/Downloads/Houseki-pet.jpg -m fill -c 000000 >/dev/null 2>&1 &
+swaybg -i ~/Downloads/landscape.jpg -m fill -c 000000 >/dev/null 2>&1 &
 
 waybar >/dev/null 2>&1 &
 fcitx5 >/dev/null 2>&1 &
