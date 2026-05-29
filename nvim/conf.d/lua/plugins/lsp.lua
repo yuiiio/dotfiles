@@ -2,6 +2,13 @@ return {
     {
         "neovim/nvim-lspconfig",
         config = function()
+            vim.lsp.config("omnisharp", {
+                cmd = {
+                    vim.fn.expand("~/.local/opt/omnisharp/OmniSharp"),
+                    "--languageserver",
+                },
+            })
+
             vim.lsp.enable("clangd")
             vim.lsp.enable("rust_analyzer")
             vim.lsp.enable("gopls")          -- Go
