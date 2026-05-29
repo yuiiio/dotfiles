@@ -5,6 +5,7 @@ export VK_LAYER_MESA_OVERLAY_CONFIG="position=bottom-left"
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:$HOME/go/bin"
+export DOTNET_ROOT="$HOME/.local/share/mise/installs/dotnet/8.0.418"
 export PATH="$PATH:$HOME/.dotnet/tools"
 
 # export DXVK_FILTER_DEVICE_NAME="UHD Graphics 630"
