@@ -4,7 +4,8 @@ export MESA_SHADER_CACHE_MAX_SIZE="10G"
 export VK_LAYER_MESA_OVERLAY_CONFIG="position=bottom-left"
 
 export PATH="$HOME/.local/bin:$PATH"
-#export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/go/bin"
+export DOTNET_ROOT="$HOME/.local/share/mise/installs/dotnet/8.0.418"
 
 # export DXVK_FILTER_DEVICE_NAME="UHD Graphics 630"
 export DXVK_HUD="devinfo,fps,frametimes,gpuload,version,api"
