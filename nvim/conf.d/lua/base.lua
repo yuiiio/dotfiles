@@ -119,4 +119,14 @@ vim.api.nvim_create_autocmd({ "TermOpen" }, {
   command = "setlocal nonumber norelativenumber",
 })
 
-vim.cmd([[autocmd FileType xml :CocDisable]])
+vim.api.nvim_create_autocmd("VimLeavePre", {
+  callback = function()
+    -- まず通常のLSP停止処理を走らせる
+    for _, client in ipairs(vim.lsp.get_clients()) do
+      client.stop()
+    end
+
+    -- フルパスや引数に 'omnisharp' が含まれるプロセスを対象にするため -f を付与
+    vim.fn.system("pkill -9 -f OmniSharp")
+  end,
+})
