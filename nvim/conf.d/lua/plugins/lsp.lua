@@ -9,6 +9,34 @@ return {
                 },
             })
 
+            local home = os.getenv("HOME")
+            vim.lsp.config("rust_analyzer", {
+                cmd = { home .. "/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/bin/rust-analyzer" },
+
+                settings = {
+                    ["rust-analyzer"] = {
+                        cargo = {
+                            -- プロジェクトの .cargo/config.toml からターゲット(xtensa-...)を自動検出させる
+                            targetFromDiscover = true,
+
+                            -- sysroot(標準ライブラリ群)や build-std を自動検出して解析に含める
+                            sysroot = "discover",
+                            buildScripts = {
+                                enable = true,
+                            },
+                        },
+                        procMacro = {
+                            enable = true,
+                        },
+                        checkOnSave = true,
+                        check = {
+                            -- 特有のFeature依存エラーを防ぐため、チェック時もワークスペースの設定に合わせる
+                            command = "check",
+                        },
+                    },
+                }, 
+            })
+
             vim.lsp.enable("clangd")
             vim.lsp.enable("rust_analyzer")
             vim.lsp.enable("gopls")          -- Go
