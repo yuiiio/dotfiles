@@ -59,6 +59,23 @@ return {
             vim.keymap.set("n", "gd", builtin.lsp_definitions)
             vim.keymap.set("n", "gi", builtin.lsp_implementations)
             vim.keymap.set("n", "gy", builtin.lsp_type_definitions)
+        
+            vim.o.updatetime = 300
+
+            -- 2. カーソルホバー時に自動でエラーをフローティングウィンドウで表示する
+            vim.api.nvim_create_autocmd("CursorHold", {
+                buffer = bufnr, -- 特定のバッファのみに適用する場合は指定（省略してグローバルでも可）
+                callback = function()
+                    local opts = {
+                        focusable = false,
+                        close_events = { "CursorMoved", "CursorMovedI", "BufLeave" },
+                        source = 'always', -- エラーの発生源（ts_ls, pyright等）を表示
+                        prefix = ' ',
+                        scope = 'cursor',  -- カーソル位置のエラーのみを表示（'line'にすると行全体）
+                    }
+                    vim.diagnostic.open_float(nil, opts)
+                end,
+            })
         end,
     }
 }
