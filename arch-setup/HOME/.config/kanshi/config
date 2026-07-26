@@ -1,6 +1,10 @@
-profile {
-	output * adaptive_sync on
-    output * max_render_time 1
-    output * scale 1
-    output * scale_filter nearest
+
+profile dual_monitor {
+    output eDP-1 mode 1920x1080 position 0,0 scale 1.0
+    #output DP-1 mode 2560x1080@59.978001 position 0,-1080 scale 1.0
+    output HDMI-A-1 mode 2560x1080@59.978001 position 0,-1080 scale 1.0
+}
+
+profile mobile {
+    output eDP-1 mode 1920x1080 position 0,0 scale 1.0
 }
