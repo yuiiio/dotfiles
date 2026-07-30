@@ -5,8 +5,6 @@ export VK_LAYER_MESA_OVERLAY_CONFIG="position=bottom-left"
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:$HOME/go/bin"
-export DOTNET_ROOT="$(dirname "$(mise which dotnet)")"
-export PATH="$PATH:$HOME/.dotnet/tools"
 
 # export DXVK_FILTER_DEVICE_NAME="UHD Graphics 630"
 export DXVK_HUD="devinfo,fps,frametimes,gpuload,version,api"
@@ -96,5 +94,3 @@ export PATH="/usr/lib/ccache/bin/:$PATH"
 # 6900xt is /dev/dri/by-path/pci-0000:03:00.0-card
 
 export SSH_OPENOCD="pi4"
-
-export PATH="$HOME/.local/share/mise/shims:$PATH"
