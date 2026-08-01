@@ -28,6 +28,7 @@ cmake ../rpcs3 \
     -DCMAKE_MODULE_LINKER_FLAGS="${LINKER_FLAG}"       \
     -DCMAKE_SHARED_LINKER_FLAGS="${LINKER_FLAG}"       \
     -DOpenGL_GL_PREFERENCE=LEGACY                      \
+    -DUSE_NATIVE_INSTRUCTIONS=OFF \
     -DCMAKE_BUILD_TYPE=RelWithDebInfo \
 
 make -j32
