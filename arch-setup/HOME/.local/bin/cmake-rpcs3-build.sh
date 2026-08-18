@@ -1,5 +1,5 @@
 
-# git submodule -q update --init $(awk '/path/ && !/llvm/ && !/opencv/ && !/libsdl-org/ && !/curl/ && !/zlib/ { print $3 }' .gitmodules)
+# git submodule -q update --init $(awk '/path/ && !/llvm/ && !/opencv/ && !/libsdl-org/ && !/curl/ && !/zlib/ && !/discord-rpc/ && !/feralinteractive/ { print $3 }' .gitmodules)
 
 export CC="/usr/bin/clang"
 export CXX="/usr/bin/clang++"
@@ -20,6 +20,7 @@ cmake ../rpcs3 \
     -DUSE_SYSTEM_FFMPEG=ON \
     -DUSE_SYSTEM_OPENCV=ON \
     -DUSE_DISCORD_RPC=OFF                               \
+    -DUSE_GAMEMODE=OFF \
     -DCMAKE_C_FLAGS="${CFLAGS}" \
     -DCMAKE_CXX_FLAGS="${CFLAGS}" \
     -DCMAKE_AR="${AR}" \
