@@ -1,4 +1,4 @@
-wlr-randr --output DP-2 --mode 2560x1080@99.943001Hz
+wlr-randr --output DP-2 --mode 2560x1440@119.998001Hz
 
 swaybg -i ~/Downloads/landscape.jpg -m fill -c 000000 >/dev/null 2>&1 &
 
