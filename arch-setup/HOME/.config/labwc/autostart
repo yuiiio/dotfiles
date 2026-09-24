@@ -1,6 +1,6 @@
 kanshi >/dev/null 2>&1 &
 
-$HOME/calib-app/build/calib-gamma eDP-1 0.93 0.93 0.93 1.00 0.98 0.87 &
+$HOME/calib-app/build/load-icc-profile $HOME/calib-app/Sharp_LQ140M1.cal eDP-1 &
 
 swaybg -i ~/Downloads/landscape.jpg -m fill -c 000000 >/dev/null 2>&1 &
 
