@@ -1,7 +1,7 @@
 [user]
 	email = atbjyk@protonmail.com
 	name = yuiiio
-	signingkey = /home/haibane/.ssh/id_ed25519
+	signingkey = /home/haibane/.ssh/git_signing_ed25519.pub
 [merge]
 	tool = vimdiff
     conflictStyle = zdiff3
@@ -38,3 +38,5 @@
     prune = true # remoteで削除されたtracking branchを削除
 [alias] #マージ済みbranchのみ削除(git branch -d)
     gone = "!f() { git fetch --prune && git branch --format='%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" { print $1 }' | xargs -r git branch -d; }; f"
+[commit]
+	gpgsign = true

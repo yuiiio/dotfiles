@@ -94,3 +94,5 @@ export PATH="/usr/lib/ccache/bin/:$PATH"
 # 6900xt is /dev/dri/by-path/pci-0000:03:00.0-card
 
 export SSH_OPENOCD="pi4"
+
+export DOTNET_CLI_TELEMETRY_OPTOUT="1"
