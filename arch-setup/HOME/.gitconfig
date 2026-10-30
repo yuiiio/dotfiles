@@ -39,4 +39,6 @@
 [alias] #マージ済みbranchのみ削除(git branch -d)
     gone = "!f() { git fetch --prune && git branch --format='%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" { print $1 }' | xargs -r git branch -d; }; f"
 [commit]
-	gpgsign = true
+    # gpgsign = true
+[gpg "ssh"]
+       allowedSignersFile = /home/haibane/.ssh/allowed_signers
