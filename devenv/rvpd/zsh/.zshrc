@@ -1,0 +1,171 @@
+bindkey -v
+bindkey "jj" vi-cmd-mode
+stty stop undef
+
+function set_win_title(){
+    echo -ne "\\033]0;$PWD \\007"
+}
+precmd_functions+=(set_win_title)
+
+### zsh history
+export HISTFILE=${HOME}/.zsh_history
+export HISTSIZE=1000
+export SAVEHIST=100000
+setopt hist_ignore_dups
+setopt EXTENDED_HISTORY
+
+### zsh completion
+export LS_COLORS='di=01;34:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+autoload -Uz compinit ; compinit
+autoload -U colors ; colors ; zstyle ':completion:*' list-colors "${LS_COLORS}"
+zstyle ':completion:*' completer _complete _match _approximate
+zstyle ':completion:*' menu select
+zstyle ':completion::complete:*' use-cache true
+zstyle ':completion:*:approximate:*' max-errors 3 numeric
+zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
+                                           /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
+
+### TMUX settings
+function is_exists() { type "$1" >/dev/null 2>&1; return $?; }
+function is_osx() { [[ $OSTYPE == darwin* ]]; }
+function is_screen_running() { [ ! -z "$STY" ]; }
+function is_tmux_runnning() { [ ! -z "$TMUX" ]; }
+function is_screen_or_tmux_running() { is_screen_running || is_tmux_runnning; }
+function shell_has_started_interactively() { [ ! -z "$PS1" ]; }
+function is_ssh_running() { [ ! -z "$SSH_CONECTION" ]; }
+
+function tmux_automatically_attach_session()
+{
+    if is_screen_or_tmux_running; then
+        ! is_exists 'tmux' && return 1
+    else
+        if shell_has_started_interactively && ! is_ssh_running; then
+            if ! is_exists 'tmux'; then
+                echo 'Error: tmux command not found' 2>&1
+                return 1
+            fi
+
+            if tmux has-session >/dev/null 2>&1 && tmux list-sessions | grep -qvE '\(attached\)$'; then
+                # detached session exists
+                tmux list-sessions
+                echo -n "Tmux: attach? (y/N/num) "
+                read
+                if [[ "$REPLY" =~ ^[Yy]$ ]] || [[ "$REPLY" == '' ]]; then
+                    tmux attach-session
+                    if [ $? -eq 0 ]; then
+                        echo "$(tmux -V) attached session"
+                        return 0
+                    fi
+                elif [[ "$REPLY" =~ ^[0-9]+$ ]]; then
+                    tmux attach -t "$REPLY"
+                    if [ $? -eq 0 ]; then
+                        echo "$(tmux -V) attached session"
+                        return 0
+                    fi
+                fi
+            fi
+
+            if is_osx && is_exists 'reattach-to-user-namespace'; then
+                # on OS X force tmux's default command
+                # to spawn a shell in the user's namespace
+                tmux_config=$(cat $HOME/.tmux.conf <(echo 'set-option -g default-command "reattach-to-user-namespace -l $SHELL"'))
+                tmux -f <(echo "$tmux_config") new-session && echo "$(tmux -V) created new session supported OS X"
+            else
+                tmux new-session && echo "tmux created new session"
+            fi
+        fi
+    fi
+}
+#tmux_automatically_attach_session
+
+#if [ ! -n "$TMUX" ]; then
+#    exit
+#fi
+
+if is_exists 'tmux'; then
+    alias tmux-changekey='tmux set-option -ag prefix C-b'
+    alias tmux-revertkey='tmux set-option -ag prefix C-a'
+fi
+
+if is_exists nvim; then;
+    EDITOR=nvim
+fi
+
+### starship
+if is_exists starship; then
+    eval "$(starship init zsh)"
+fi
+
+### git
+alias g=git
+if is_exists hub; then
+    eval "$(hub alias -s)"
+fi
+
+### anyenv
+if is_exists anyenv; then
+    eval "$(anyenv init -)"
+fi
+
+### direnv
+if is_exists direnv; then
+    eval "$(direnv hook zsh)"
+fi
+
+### rustup
+if [ -f ~/.cargo/env ]; then
+    source ~/.cargo/env
+fi
+
+### choosenim
+if [ -d ~/.nimble/bin ]; then
+    export CHOOSENIM_NO_ANALYTICS=1
+    export PATH="$HOME/.nimble/bin:$PATH"
+fi
+
+### fzf
+if [ -f ~/.fzf.zsh ]; then
+    source ~/.fzf.zsh
+    export FZF_DEFAULT_OPTS='--height 50% --reverse --border'
+fi
+
+### pet
+if is_exists pet; then
+    function pet-select() {
+      BUFFER=$(pet search --query "$LBUFFER")
+      CURSOR=$#BUFFER
+      zle redisplay
+    }
+    zle -N pet-select
+    stty -ixon
+    bindkey '^s' pet-select
+fi
+
+### utilities
+case ${OSTYPE} in
+    linux*)
+        if is_exists xsel; then
+            alias pbcopy='xsel -i --clipboard'
+            alias pbpaste='xsel -o --clipboard'
+        fi
+        if is_exists xdg-open; then
+            alias open=xdg-open
+        fi
+        if is_exists gs; then
+            alias pdfcat="gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=-"
+        fi
+        if is_exists make; then
+            alias m="make"
+        fi
+        if is_exists exa; then
+            alias e="exa"
+        fi
+    ;;
+esac
+
+set -o ignoreeof
+function do_nothing() {}
+zle -N do_nothing
+bindkey "^D" do_nothing
+
+alias ls="ls --color"

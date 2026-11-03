@@ -1,0 +1,56 @@
+# rvpd 開発用イメージ
+# OS とシステムパッケージだけを入れる。node / pnpm / neovim / Claude Code などの
+# ユーザーツールはホームの named volume に入れる。
+# setup-home.sh はイメージに入れず、run.sh で /devenv に読み取り専用でマウントする。
+# npm は使わず、pnpm と mise で管理する。
+FROM docker.io/rockylinux/rockylinux:9
+ 
+# システムパッケージ
+#   gcc, make      : neovim の tree-sitter パーサのビルド用
+#   ripgrep, fd    : neovim(telescope 等)用。EPEL から入れる
+#   ncurses-term   : ホストのターミナル(foot, kitty 等)の terminfo
+#   libatomic      : Node.js の公式バイナリが実行時に必要とする
+#   dotnet-sdk-10.0: Rocky 9 の AppStream から。見つからない場合は
+#                    Microsoft の dotnet-install.sh に切り替える
+#
+# ミラーの同期ずれ(404)を避けるため、Rocky の公式サーバーから直接取得する
+# パッケージは GPG 署名で検証されるので、取得元を変えても安全性は変わらない
+RUN sed -i -e 's/^mirrorlist=/#mirrorlist=/' \
+           -e 's|^#baseurl=http://dl.rockylinux.org|baseurl=https://dl.rockylinux.org|' \
+           /etc/yum.repos.d/rocky*.repo \
+ && dnf install -y epel-release \
+ && dnf install -y --setopt=install_weak_deps=False \
+      git openssl ca-certificates findutils procps-ng which less diffutils jq \
+      tar gzip xz unzip bzip2 \
+      gcc gcc-c++ make clangd \
+      ripgrep fd-find \
+      ncurses-term glibc-langpack-ja libatomic \
+      zsh \
+      postgresql \
+      dotnet-sdk-10.0 \
+ && dnf clean all
+ 
+# mise 本体はシステムに置く(ツールのデータはホームに入る)
+RUN curl -fsSL https://mise.run | MISE_INSTALL_PATH=/usr/local/bin/mise sh
+ 
+# ホストの user1 と同じ UID・GID のユーザーを作る(名前とホームはコンテナ独自でよい)
+# --userns=keep-id と組み合わせると、ファイルの所有者(UID)がホストと一致する
+ARG USERNAME=dev
+ARG USER_UID=1000
+ARG USER_GID=1000
+RUN groupadd -g ${USER_GID} ${USERNAME} \
+ && useradd -m -u ${USER_UID} -g ${USER_GID} -s /bin/zsh ${USERNAME}
+ 
+ENV LANG=C.UTF-8 \
+    DOTNET_CLI_TELEMETRY_OPTOUT=1 \
+    DOTNET_NOLOGO=1 \
+    PNPM_HOME=/home/${USERNAME}/.local/share/pnpm \
+    PATH=/home/${USERNAME}/.local/bin:/home/${USERNAME}/.local/share/pnpm/bin:/home/${USERNAME}/.local/share/mise/shims:/home/${USERNAME}/.dotnet/tools:${PATH}
+ 
+USER ${USERNAME}
+WORKDIR /home/${USERNAME}
+ 
+# ホーム直下のディレクトリを dev の所有で作っておく
+# (run.sh で ~/.config/nvim をマウントすると、無い場合に root 所有で作られてしまうため)
+RUN mkdir -p ~/.config ~/.cache ~/.local/bin ~/.local/share ~/.local/opt
+CMD ["sleep", "infinity"]
