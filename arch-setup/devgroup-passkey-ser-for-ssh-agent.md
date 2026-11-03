@@ -13,9 +13,9 @@ sudo passwd user2
 # user1とuser2で完全に別のツリーを持ち、.gitフォルダ以外を都度確認しながらuser2から取り込む
 # .github/workflows/, package.json の scripts、.npmrc、pnpm-lock.yaml: レジストリや解決先の URL、integrity の変更に注意
 
-# コンテナ内user1で(user-2の変更)の取り込みは、読み込みのみのbare-repo(to-user1)を通す
-# user2での取り込みは、読み込みのみのbare-repo(to-user2)からfetchする
-# user2でto-user2, user1では両方(to-user1/to-user2)でのgit操作を禁止する(bare-repoのfetchのみ)
+# コンテナ内user1で(user-2の変更)の取り込みは、push-dir(読み込みのみ権限)からfetch
+# user2での取り込みは、work-dir(読み込みのみ権限)からfetchする
+# user2, user1でのwork-dirのgit操作を禁止する(fetch はコンテナ内から)
 
 # お互いの書き込みのみできるフォルダと、読み込みのみできるフォルダを別々に持たせる
 
@@ -24,61 +24,41 @@ sudo passwd user2
 # ディレクトリに設定した場合： そのディレクトリ内に新しく作成されたファイルやフォルダは、作成したユーザーの主グループに関わらず、自動的にこのディレクトリと同じグループ所有権を引き継ぎます
 # • ファイル（実行バイナリ）に設定した場合： どのユーザーが実行しても、そのファイルの「所有グループ」の権限で実行されます
 
-# 受け渡し箱(git-bare-repository with separated single-direction read/write permission)
+# 受け渡し箱
 # /srv/dev-exchange/
-# ├── to-user2/    user1 所有、devgroup、2750  ← コンテナがパッチを書き出す。user2 は読むだけ
-# └── to-user1/    user2 所有、755            ← user2 が bundle を置く。user1 は読むだけ
+# ├── work/    user1 所有、devgroup、2750  ← コンテナが書き込む。user2 は読むだけ
+# └── push/    user2 所有、755            ← user2が書き込む。user1(コンテナ) は読むだけ
 
 ```
-sudo install -d -o user1 -g devgroup -m 2750 /srv/rvpd-exchange/to-user2.git
-sudo install -d -o user2 -g user2    -m 0755 /srv/rvpd-exchange/to-user1.git # コードはこのPC内のユーザーからは機密でないので、コンテナから補助グループなしで参照可能にしておく
+sudo install -d -o user2 -g user2 -m 0750 /srv/rvpd/push # コードはこのPC内のユーザーからは機密でないので、コンテナから補助グループなしで参照可能にしておく
+
+sudo install -d -o user1 -g devgroup -m 2750 /srv/rvpd/work # グループに読み取りを許可、ディレクトリ内新規ファイルは権限を引き継ぐ
+```
+# user2で/srv/dev-exchange/pushにリポジトリの中身をコピー
+```
+cp -a /path/from-git/. /srv/rvpd/push/
+```
+## user1でpushからworkにクローン(originはpushを指す)
+```
+git clone file:///srv/rvpd/push /srv/rvpd/work
 ```
 
 ## コンテナへのマウント方法
 ```
--v /home/user1/work/rvpd:/home/user1/work/rvpd \
--v /srv/rvpd-exchange/to-user2:/srv/exchange/to-user2 \
--v /srv/rvpd-exchange/to-user1:/srv/exchange/to-user1:ro
+-v /srv/rvpd/work:/srv/rvpd/work \
+-v /srv/rvpd/push:/srv/rvpd/push:ro
 ```
 
 # user2
 ```
-git init --bare /srv/rvpd-exchange/to-user1.git
-cd ~/repo/rvpd
-git remote add exchange file:///srv/rvpd-exchange/to-user1.git   # push 用
-git remote add worker   file:///srv/rvpd-exchange/to-user2.git   # fetch 用
-git push exchange main
+git remote add work file:///srv/rvpd/work
 ```
-
-# user1(コンテナ内)
+## user1,user2ともに
+## コンテナの外ではworkフォルダでgitコマンドを使わない(コンテナからの危険な変更が含まれているため)
+## コンテナ内でfetch
 ```
-git init --bare /srv/rvpd-exchange/to-user2.git
-git remote set-url origin file:///srv/rvpd-exchange/to-user1.git  # fetch 用
-git remote add outbox     file:///srv/rvpd-exchange/to-user2.git  # push 用
+work-dirでpushをfetchする場合は、決してuser2,user1でwork-dirでgitコマンドを使用しない
 ```
-
-# user2: upstream の更新を渡す(exchange=to-user1)
-```
-git pull && git push exchange main
-```
-
-# コンテナ内: 取り込み、作業して渡す(outbox=to-user2)
-```
-git fetch origin && git rebase origin/main
-git push outbox HEAD:refs/heads/feature-x
-```
-
-# user2: 受け取ってレビュー
-```
-git fetch worker
-git log -p main..worker/feature-x
-git merge --ff-only worker/feature-x   # または cherry-pick
-git push
-```
-
-## user1(コンテナの外)ではgitコマンドを使わない(コンテナからの危険な変更が含まれているため)
-## 同様に、user2はto-user2内でgitコマンドを使用禁止にする(to-user2をfetchするだけ)
-
 
 ## password-encもuser2以下に保存(chmod 700)
 # drwx------ 2 passkey devgroup
