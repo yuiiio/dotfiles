@@ -26,6 +26,7 @@ if ! podman container exists "$NAME"; then
     -v "rvpd-home:$CHOME" \
     -v "$HOME/.config/nvim:$CHOME/.config/nvim:ro" \
     -v "$DEVENV:/devenv:ro" \
+    -v "$HOME/share-rvpd-read-only-for-container:$CHOME/share-rvpd-doc:ro" \
     -e ZDOTDIR=/devenv/zsh \
     -v "$WORK:$WORK" \
     -v "$PUSH:$PUSH:ro" \
