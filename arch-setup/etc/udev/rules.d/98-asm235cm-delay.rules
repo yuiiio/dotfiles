@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="174c", ATTR{idProduct}=="235c", RUN+="/bin/sh -c 'sleep 2; /usr/bin/udevadm trigger --subsystem-match=scsi_disk --action=change'"
